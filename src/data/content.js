@@ -68,7 +68,7 @@ export const portfolio = {
   projects: [
     // REPLACE names, descriptions, images (public/images/*) and demo links with your own
     { name: 'Smile Dental Care', category: 'Clinic', image: '/images/clinic.svg', description: 'Appointment-focused site with services, doctor profile and Google Maps.', link: 'https://example.com/demo-clinic' },
-    { name: 'Spice Garden', category: 'Restaurant', image: '/images/restaurant.svg', description: 'Menu, photo gallery and one-tap table booking on WhatsApp.', link: 'https://example.com/demo-restaurant' },
+    { name: 'Saffron & Spice', category: 'Restaurant', image: '/images/restaurant.jpg', description: 'Menu, photo gallery and one-tap table booking for an Indian fusion restaurant.', link: 'https://hussaindev-mdu.github.io/demo-restaurant/' },
     { name: 'Glow Beauty Salon', category: 'Salon', image: '/images/salon.svg', description: 'Service price list, before/after gallery and online enquiry form.', link: 'https://example.com/demo-salon' },
     { name: 'IronFit Gym', category: 'Fitness', image: '/images/fitness.svg', description: 'Membership plans, trainer profiles and free-trial sign-up.', link: 'https://example.com/demo-gym' },
   ],

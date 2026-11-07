@@ -1,6 +1,7 @@
-import { Zap, MessagesSquare, ShieldCheck, User } from 'lucide-react'
+import { Zap, MessagesSquare, ShieldCheck } from 'lucide-react'
 import { about, brand } from '../data/content'
 import Reveal from './Reveal'
+import { LogoIcon } from './Logo'
 
 const icons = { zap: Zap, message: MessagesSquare, shield: ShieldCheck }
 
@@ -12,9 +13,12 @@ export default function About() {
           {about.photo ? (
             <img src={about.photo} alt={brand.owner} loading="lazy" width="480" height="480" className="mx-auto aspect-square w-full max-w-sm rounded-3xl object-cover shadow-card" />
           ) : (
-            <div className="mx-auto flex aspect-square w-full max-w-sm flex-col items-center justify-center gap-2 rounded-3xl bg-brand-100 text-brand-700" role="img" aria-label="Photo placeholder">
-              <User size={72} aria-hidden />
-              <span className="text-sm font-semibold">Your photo here</span>
+            <div className="mx-auto flex aspect-square w-full max-w-sm flex-col items-center justify-center gap-4 rounded-3xl bg-brand-100" role="img" aria-label={`${brand.name} logo`}>
+              <LogoIcon className="h-28 w-28" />
+              <span className="font-heading text-3xl font-extrabold tracking-tight text-brand-900">
+                {brand.name.replace('Studio', '')}
+                <span className="text-accent-600">Studio</span>
+              </span>
             </div>
           )}
         </Reveal>
