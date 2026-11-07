@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+  body { @apply bg-white font-body text-ink antialiased; }
+  h1, h2, h3, h4 { @apply font-heading text-brand-900; }
+  :focus-visible { @apply outline outline-2 outline-offset-2 outline-accent-600; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+}
+
+@layer components {
+  .container-x { @apply mx-auto w-full max-w-6xl px-5 sm:px-8; }
+  .section { @apply py-16 sm:py-24; }
+  .btn { @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-base font-semibold transition focus-visible:outline-offset-2; }
+  .btn-primary { @apply btn bg-accent-600 text-white hover:bg-accent-700; }
+  .btn-outline { @apply btn border-2 border-brand-900 text-brand-900 hover:bg-brand-900 hover:text-white; }
+  .btn-whatsapp { @apply btn bg-[#15803D] text-white hover:bg-[#166534]; }
+  .section-title { @apply text-3xl font-extrabold tracking-tight sm:text-4xl; }
+  .section-sub { @apply mt-3 max-w-2xl text-lg text-muted; }
+}

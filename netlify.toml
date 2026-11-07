@@ -1,0 +1,5 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+# Unknown URLs automatically show dist/404.html (copied from public/404.html).
