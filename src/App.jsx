@@ -4,7 +4,6 @@ import Problems from './components/Problems'
 import Portfolio from './components/Portfolio'
 import Pricing from './components/Pricing'
 import Process from './components/Process'
-import Testimonials from './components/Testimonials'
 import About from './components/About'
 import FAQ from './components/FAQ'
 import Contact from './components/Contact'
@@ -21,7 +20,6 @@ export default function App() {
         <Portfolio />
         <Pricing />
         <Process />
-        <Testimonials />
         <About />
         <FAQ />
         <Contact />

@@ -67,22 +67,21 @@ export const portfolio = {
   cta: 'View Live Demo',
   projects: [
     // REPLACE names, descriptions, images (public/images/*) and demo links with your own
-    { name: 'Smile Dental Care', category: 'Clinic', image: '/images/clinic.svg', description: 'Appointment-focused site with services, doctor profile and Google Maps.', link: 'https://example.com/demo-clinic' },
+    { name: 'CarePlus', category: 'Clinic', image: '/images/careplus.jpg', description: 'Appointment-focused site with services, doctor profile and Google Maps.', link: 'https://hussaindev-mdu.github.io/demo-clinic/' },
     { name: 'Saffron & Spice', category: 'Restaurant', image: '/images/restaurant.jpg', description: 'Menu, photo gallery and one-tap table booking for an Indian fusion restaurant.', link: 'https://hussaindev-mdu.github.io/demo-restaurant/' },
-    { name: 'Glow Beauty Salon', category: 'Salon', image: '/images/salon.svg', description: 'Service price list, before/after gallery and online enquiry form.', link: 'https://example.com/demo-salon' },
-    { name: 'IronFit Gym', category: 'Fitness', image: '/images/fitness.svg', description: 'Membership plans, trainer profiles and free-trial sign-up.', link: 'https://example.com/demo-gym' },
+    { name: 'Playfix Tailoring', category: 'Tailoring', image: '/images/playfix.jpg', description: 'Bespoke tailoring and alterations site with services, gallery and consultation booking.', link: 'https://playfixmdu.in/' },
   ],
 }
 
 export const pricing = {
   title: 'Simple, honest pricing',
-  subtitle: 'One-time pricing for your website. No surprise costs.',
+  subtitle: 'Pay once and get lifetime access to your website. No surprise costs.',
   cta: 'Get Started',
   packages: [
     {
       name: 'Starter',
       price: '₹9,999',
-      period: 'one-time',
+      period: 'lifetime access',
       description: 'A clean, professional online presence.',
       features: ['1–5 pages', 'Mobile-friendly design', 'Contact form', 'WhatsApp button', 'Google Maps', '6-day delivery'],
       popular: false,
@@ -90,17 +89,19 @@ export const pricing = {
     {
       name: 'Business',
       price: '₹24,999',
-      period: 'one-time',
+      period: 'lifetime access',
       description: 'Everything you need to get found and get enquiries.',
       features: ['5–7 pages', 'Admin panel access (add, view, edit & delete content)', 'Basic SEO', 'Google Business Profile setup', 'Everything in Starter'],
       popular: true,
     },
     {
       name: 'Maintenance',
-      price: '₹1,499',
-      period: 'per month',
-      description: 'Keep your site fresh, safe and up to date.',
-      features: ['Content updates', 'Regular backups', 'Small changes', 'Priority WhatsApp support'],
+      badge: '1st Year FREE',
+      price: '₹375',
+      period: 'per month, billed yearly (₹4,500)',
+      description: 'Your first year of maintenance is free. After that, stay covered for less.',
+      highlight: 'First year free with every website',
+      features: ['₹375/month when billed yearly (₹4,500/year)', '₹500/month when billed every 6 months (₹3,000)', 'Content updates', 'Regular backups', 'Small changes', 'Priority WhatsApp support'],
       popular: false,
     },
   ],
@@ -151,7 +152,7 @@ export const faq = {
     { q: 'Do I need to buy a domain and hosting?', a: 'Yes, but I handle the setup for you. A domain typically costs around ₹800–1,200 per year and hosting can be free or low-cost. I will guide you on the best options.' },
     { q: 'How many revisions do I get?', a: 'You get unlimited small tweaks during the design stage and up to 3 rounds of major revisions, so the final result is exactly what you want.' },
     { q: 'Who owns the website?', a: 'You do. Once the final payment is made, the design, content, domain and hosting accounts are all yours.' },
-    { q: 'What does the maintenance plan include?', a: 'Content and price updates, regular backups, security checks and small changes, for ₹1,499 per month. You can cancel any time.' },
+    { q: 'What does the maintenance plan include?', a: 'Content and price updates, regular backups, security checks and small changes. The first year is free with every website. After that it costs ₹375 per month billed yearly (₹4,500), or ₹500 per month billed every 6 months (₹3,000).' },
   ],
 }
 
