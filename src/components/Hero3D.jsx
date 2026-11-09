@@ -20,7 +20,6 @@ export default function Hero3D() {
   useEffect(() => {
     let disposed = false
     let cleanup = () => {}
-    let cleanupExtra = () => {}
 
     ;(async () => {
       try {
@@ -33,7 +32,7 @@ export default function Hero3D() {
         const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
         const coarse = window.matchMedia('(pointer: coarse)').matches
         const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true })
-        renderer.setPixelRatio(Math.min(window.devicePixelRatio, coarse ? 1.5 : 2))
+        renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
         renderer.outputColorSpace = THREE.SRGBColorSpace
         renderer.toneMapping = THREE.NeutralToneMapping
 
@@ -90,7 +89,7 @@ export default function Hero3D() {
           camera.aspect = w / h
           const t = Math.tan(THREE.MathUtils.degToRad(camera.fov) / 2)
           const phone = w < 640
-          const scale = phone ? 1.3 : 1 // larger distance = smaller model
+          const scale = phone ? 1.15 : 1 // larger distance = smaller model
           const d = (Math.max((size.x * 0.62) / (t * camera.aspect), (size.y * 0.7) / t) + size.z / 2) * scale
           camera.position.set(0, d * 0.16, d)
           camera.lookAt(0, -size.y * 0.04, 0)
@@ -137,6 +136,8 @@ export default function Hero3D() {
         const io = new IntersectionObserver(([en]) => { visible = en.isIntersecting })
         io.observe(el)
 
+        const swayAmp = reduceMotion ? 0.1 : coarse ? 0.4 : 0.3
+        const swaySpeed = reduceMotion ? 0.35 : coarse ? 0.9 : 0.6
         const baseY = model.position.y
         const clock = new THREE.Clock()
         let raf = 0
@@ -146,8 +147,9 @@ export default function Hero3D() {
           amount = reduceMotion ? target : amount + (target - amount) * 0.12
           if (Math.abs(target - amount) < 0.001) amount = target
           applyLid()
+          // idle sway always runs so the laptop is never frozen; "reduce motion" gets a much gentler one
+          group.rotation.y += (Math.sin(t * swaySpeed) * swayAmp + (reduceMotion ? 0 : mx * 0.35) - group.rotation.y) * 0.06
           if (!reduceMotion) {
-            group.rotation.y += (Math.sin(t * 0.6) * 0.3 + mx * 0.35 - group.rotation.y) * 0.06
             group.rotation.x += (my * 0.3 - group.rotation.x) * 0.06
             model.position.y = baseY + Math.sin(t * 1.2) * 0.06
           }
@@ -159,16 +161,10 @@ export default function Hero3D() {
         }
         render()
         setReady(true)
-        if (reduceMotion) {
-          // no continuous animation: just redraw when the lid state changes
-          const redraw = () => render()
-          el.addEventListener('lid-change', redraw)
-          cleanupExtra = () => el.removeEventListener('lid-change', redraw)
-        } else loop()
+        loop()
 
         cleanup = () => {
           cancelAnimationFrame(raf)
-          cleanupExtra()
           ro.disconnect(); io.disconnect()
           window.removeEventListener('pointermove', onMove)
           canvas.removeEventListener('pointermove', onCanvasMove)
@@ -187,11 +183,6 @@ export default function Hero3D() {
     return () => { disposed = true; cleanup() }
   }, [])
 
-  // reduced-motion users get no render loop, so nudge a redraw when the lid state changes
-  useEffect(() => {
-    mount.current?.dispatchEvent(new Event('lid-change'))
-  }, [closed])
-
   return (
     <div className="mx-auto w-full max-w-sm sm:max-w-xl">
       <div className="relative aspect-[16/11] w-full sm:aspect-[4/3]">
@@ -205,17 +196,20 @@ export default function Hero3D() {
           />
         )}
         <div ref={mount} data-cursor3d className="absolute inset-0" role="img" aria-label="3D laptop showing our website demo" />
-        {ready && (
+      </div>
+      {ready && (
+        <div className="mt-4 flex justify-center md:mt-0">
           <button
             type="button"
             onClick={toggle}
             aria-pressed={closed}
-            className="absolute bottom-1 left-1/2 -translate-x-1/2 rounded-full bg-brand-900 px-4 py-2 text-sm font-semibold text-white shadow-card transition hover:bg-brand-700 md:sr-only md:focus:not-sr-only md:focus:px-4 md:focus:py-2"
+            aria-label={closed ? 'Click it to open the laptop' : 'Click it to close the laptop'}
+            className="rounded-full bg-brand-900 px-4 py-2 text-sm font-semibold text-white shadow-card transition hover:bg-brand-700 md:sr-only md:focus:not-sr-only md:focus:px-4 md:focus:py-2"
           >
-            {closed ? 'Open laptop' : 'Close laptop'}
+            Click it
           </button>
-        )}
-      </div>
+        </div>
+      )}
       {ready && <p className="mt-2 hidden text-center text-xs text-muted md:block">Click the laptop to {closed ? 'open' : 'close'} it</p>}
     </div>
   )
