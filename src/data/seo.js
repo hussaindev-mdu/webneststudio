@@ -22,23 +22,35 @@ export const metaFor = (page) => ({ path: pathFor(page.slug), title: page.title,
 // every indexable page, used for prerendering and the sitemap
 export const routes = [homeMeta, ...pages.map(metaFor)]
 
-const business = {
-  '@type': 'ProfessionalService',
-  '@id': `${SITE.url}/#business`,
+const ORG_ID = `${SITE.url}/#organization`
+
+// Only real profiles go in sameAs; the placeholder links in content.js are skipped until replaced.
+const sameAs = [brand.instagram, brand.facebook].filter((u) => u && !/yourhandle|yourpage/.test(u))
+
+// Defined once, on the home page. Other pages refer to it with an inline minimal reference.
+const organization = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  '@id': ORG_ID,
   name: brand.name,
   url: SITE.url + '/',
-  logo: `${SITE.url}/favicon.svg`,
-  image: SITE.ogImage,
+  logo: `${SITE.url}/logo.png`,
   email: brand.email,
-  telephone: '+' + brand.whatsappNumber,
-  areaServed: { '@type': 'Country', name: 'India' },
-  priceRange: '₹5,999 - ₹9,999',
-  description: homeMeta.description,
+  contactPoint: [{ '@type': 'ContactPoint', contactType: 'customer support', telephone: '+' + brand.whatsappNumber, email: brand.email, areaServed: 'IN', availableLanguage: ['en'] }],
+  ...(sameAs.length ? { sameAs } : {}),
 }
 
 export const homeSchema = [
-  { '@context': 'https://schema.org', ...business },
-  { '@context': 'https://schema.org', '@type': 'WebSite', name: brand.name, url: SITE.url + '/' },
+  organization,
+  {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    '@id': `${SITE.url}/#website`,
+    name: brand.name,
+    url: SITE.url + '/',
+    inLanguage: 'en-IN',
+    publisher: { '@id': ORG_ID },
+  },
 ]
 
 export const serviceSchema = (page) => ({
@@ -49,7 +61,8 @@ export const serviceSchema = (page) => ({
   description: page.description,
   url: urlFor(page.slug),
   areaServed: { '@type': 'Country', name: 'India' },
-  provider: { '@id': `${SITE.url}/#business` },
+  '@id': `${urlFor(page.slug)}#service`,
+  provider: { '@type': 'Organization', '@id': ORG_ID, name: brand.name, url: SITE.url + '/' },
 })
 
 export const breadcrumbSchema = (page) => ({
