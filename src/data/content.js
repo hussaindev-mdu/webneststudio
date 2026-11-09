@@ -22,11 +22,12 @@ export const defaultWhatsAppMessage =
   "Hi WebNestStudio, I'm interested in a website for my business"
 
 export const nav = [
-  { label: 'Work', href: '#portfolio' },
+  { label: 'Project Demo', href: '#portfolio' },
   { label: 'Pricing', href: '#pricing' },
   { label: 'Process', href: '#process' },
   { label: 'About', href: '#about' },
   { label: 'FAQ', href: '#faq' },
+  { label: 'Contact Us', href: '#contact' },
 ]
 
 export const hero = {
@@ -35,7 +36,9 @@ export const hero = {
   subtext:
     'I design fast, mobile-friendly websites that help local customers find you on Google, trust your business and contact you in one tap.',
   eyebrow: 'Websites starting from ₹5,999',
-  primaryCta: 'See My Work',
+  label: 'Lowest price in India',
+  primaryCta: 'Get a Free Quote',
+  proposalLine: 'Tell us about your business. Get a website proposal on WhatsApp.',
   secondaryCta: 'Chat on WhatsApp',
   badges: ['6-day delivery', 'Mobile-first', 'No hidden fees'],
 }
@@ -76,22 +79,25 @@ export const portfolio = {
 
 export const pricing = {
   title: 'Simple, honest pricing',
-  subtitle: 'Pay once and get lifetime access to your website. No surprise costs.',
+  subtitle: 'One-time website development fee. No surprise costs.',
   cta: 'Get Started',
-  finePrint: '* Prices exclude domain charges.',
+  offer: 'WebNestStudio Launching Offer',
+  finePrint: '* One-time website development fee. Domain, hosting and renewal charges are separate where applicable.',
   packages: [
     {
       name: 'Basic',
+      originalPrice: '₹9,999',
       price: '₹5,999',
-      period: 'lifetime access',
+      period: 'one-time fee',
       description: 'A simple, professional website to get you online.',
       features: ['1–5 pages', 'Mobile-friendly design', 'WhatsApp button', 'Google Maps', '6-day delivery', 'No contact form or 3D animations'],
       popular: false,
     },
     {
       name: 'Starter',
+      originalPrice: '₹15,999',
       price: '₹9,999',
-      period: 'lifetime access',
+      period: 'one-time fee',
       description: 'Everything in Basic, plus a contact form and 3D animations.',
       features: ['Everything in Basic', 'Contact form', '3D animations', '1–5 pages', '6-day delivery', 'Need an admin panel to manage your content? Additional charges apply'],
       popular: true,
@@ -154,7 +160,8 @@ export const faq = {
     { q: 'Do I need to buy a domain and hosting?', a: 'Yes, but I handle the setup for you. A domain typically costs around ₹800–1,200 per year and hosting can be free or low-cost. I will guide you on the best options.' },
     { q: 'How many revisions do I get?', a: 'You get unlimited small tweaks during the design stage and up to 3 rounds of major revisions, so the final result is exactly what you want.' },
     { q: 'Who owns the website?', a: 'You do. Once the final payment is made, the design, content, domain and hosting accounts are all yours.' },
-    { q: 'What does the maintenance plan include?', a: 'Content and price updates, regular backups, security checks and small changes. The first year is free with every website. After that it costs ₹375 per month billed yearly (₹4,500), or ₹500 per month billed every 6 months (₹3,000).' },
+    { q: 'Are domain and hosting included?', a: 'No. The price is a one-time fee for designing and building your website. Domain, hosting and renewal charges are separate where applicable. You own your domain and your content, and your first year of maintenance is free. After that you can continue with the maintenance plan.' },
+  { q: 'What does the maintenance plan include?', a: 'Content and price updates, regular backups, security checks and small changes. The first year is free with every website. After that it costs ₹375 per month billed yearly (₹4,500), or ₹500 per month billed every 6 months (₹3,000).' },
   ],
 }
 
@@ -167,7 +174,7 @@ export const contact = {
 
 export const footer = {
   links: [
-    { label: 'Work', href: '#portfolio' },
+    { label: 'Project Demo', href: '#portfolio' },
     { label: 'Pricing', href: '#pricing' },
     { label: 'Process', href: '#process' },
     { label: 'FAQ', href: '#faq' },

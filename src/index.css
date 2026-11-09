@@ -3,19 +3,35 @@
 @tailwind utilities;
 
 @layer base {
+  :root {
+    --c-surface: 255 255 255; --c-card: 255 255 255; --c-cream: 255 249 243; --c-alt: 238 245 251;
+    --c-tint: 217 232 245; --c-line: 217 232 245; --c-head: 10 39 66; --c-link: 18 74 120;
+    --c-ink: 27 39 51; --c-muted: 71 84 103;
+    color-scheme: light;
+  }
+  .dark {
+    --c-surface: 11 22 35; --c-card: 19 36 58; --c-cream: 16 29 47; --c-alt: 15 29 47;
+    --c-tint: 19 36 58; --c-line: 34 58 87; --c-head: 241 245 249; --c-link: 125 184 234;
+    --c-ink: 226 232 240; --c-muted: 169 180 196;
+    color-scheme: dark;
+  }
   html { scroll-behavior: smooth; scroll-padding-top: 80px; }
-  body { @apply bg-white font-body text-ink antialiased; }
-  h1, h2, h3, h4 { @apply font-heading text-brand-900; }
+  body { @apply bg-surface font-body text-ink antialiased; }
+  h1, h2, h3, h4 { @apply font-heading text-head; }
   :focus-visible { @apply outline outline-2 outline-offset-2 outline-accent-600; }
   @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 }
+
+/* While the 3D mouse cursor is running, hide the normal pointer over the 3D laptop only */
+html.has-3d-cursor [data-cursor3d],
+html.has-3d-cursor [data-cursor3d] * { cursor: none !important; }
 
 @layer components {
   .container-x { @apply mx-auto w-full max-w-6xl px-5 sm:px-8; }
   .section { @apply py-16 sm:py-24; }
   .btn { @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-base font-semibold transition focus-visible:outline-offset-2; }
   .btn-primary { @apply btn bg-accent-600 text-white hover:bg-accent-700; }
-  .btn-outline { @apply btn border-2 border-brand-900 text-brand-900 hover:bg-brand-900 hover:text-white; }
+  .btn-outline { @apply btn border-2 border-brand-900 text-brand-900 hover:bg-brand-900 hover:text-white dark:border-slate-200 dark:text-slate-100 dark:hover:bg-slate-100 dark:hover:text-brand-900; }
   .btn-whatsapp { @apply btn bg-[#15803D] text-white hover:bg-[#166534]; }
   .section-title { @apply text-3xl font-extrabold tracking-tight sm:text-4xl; }
   .section-sub { @apply mt-3 max-w-2xl text-lg text-muted; }

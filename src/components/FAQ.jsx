@@ -6,17 +6,17 @@ import Reveal from './Reveal'
 export default function FAQ() {
   const [open, setOpen] = useState(0)
   return (
-    <section id="faq" className="section bg-white">
+    <section id="faq" className="section bg-surface">
       <div className="container-x max-w-3xl">
         <Reveal><h2 className="section-title">{faq.title}</h2></Reveal>
-        <div className="mt-8 divide-y divide-brand-100 rounded-2xl border border-brand-100">
+        <div className="mt-8 divide-y divide-line rounded-2xl border border-line">
           {faq.items.map((item, i) => {
             const isOpen = open === i
             return (
               <div key={item.q}>
                 <h3>
                   <button
-                    className="flex w-full items-center justify-between gap-4 p-5 text-left text-base font-semibold text-brand-900 sm:text-lg"
+                    className="flex w-full items-center justify-between gap-4 p-5 text-left text-base font-semibold text-head sm:text-lg"
                     aria-expanded={isOpen}
                     aria-controls={`faq-${i}`}
                     id={`faq-btn-${i}`}

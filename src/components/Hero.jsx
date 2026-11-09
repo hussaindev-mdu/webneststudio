@@ -2,18 +2,23 @@ import { Check } from 'lucide-react'
 import { brand, hero, whatsappLink } from '../data/content'
 import { WhatsAppIcon } from './Icons'
 import Reveal from './Reveal'
+import Hero3D from './Hero3D'
 
 export default function Hero() {
   const headline = hero.headline.replace('{niche}', brand.niche).replace('{city}', brand.city)
   return (
-    <section id="top" className="bg-gradient-to-b from-cream to-white pt-28 pb-16 sm:pt-36 sm:pb-24">
+    <section id="top" className="bg-gradient-to-b from-cream to-surface pt-28 pb-16 sm:pt-36 sm:pb-24">
       <div className="container-x grid items-center gap-10 lg:grid-cols-2">
         <Reveal>
-          <p className="mb-4 inline-block rounded-full bg-accent-50 px-3 py-1 text-sm font-semibold text-accent-700">{hero.eyebrow || brand.tagline}</p>
+          <div className="mb-4 flex flex-wrap items-center gap-2">
+            <p className="rounded-full bg-accent-50 px-3 py-1 text-sm font-semibold text-accent-700 dark:bg-accent-500/15 dark:text-orange-300">{hero.eyebrow || brand.tagline}</p>
+            {hero.label && <p className="rounded-full bg-accent-600 px-3 py-1 text-sm font-bold text-white">{hero.label}</p>}
+          </div>
           <h1 className="text-4xl font-extrabold leading-tight tracking-tight sm:text-5xl">{headline}</h1>
           <p className="mt-5 max-w-xl text-lg text-muted">{hero.subtext}</p>
-          <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-            <a href="#portfolio" className="btn-primary">{hero.primaryCta}</a>
+          <p className="mt-6 max-w-xl font-semibold text-head">{hero.proposalLine}</p>
+          <div className="mt-4 flex flex-col gap-3 sm:flex-row">
+            <a href="#contact" className="btn-primary">{hero.primaryCta}</a>
             <a href={whatsappLink()} target="_blank" rel="noopener noreferrer" className="btn-whatsapp">
               <WhatsAppIcon /> {hero.secondaryCta}
             </a>
@@ -25,8 +30,7 @@ export default function Hero() {
           </ul>
         </Reveal>
         <Reveal delay={0.15}>
-          {/* Hero image loads eagerly (above the fold) */}
-          <img src="/images/hero-devices.svg" alt="Website displayed on a laptop and a phone" width="640" height="480" className="mx-auto w-full max-w-lg" fetchPriority="high" />
+          <Hero3D />
         </Reveal>
       </div>
     </section>

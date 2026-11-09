@@ -4,7 +4,7 @@ import { brand, contact, formspreeId, whatsappLink } from '../data/content'
 import { WhatsAppIcon } from './Icons'
 import Reveal from './Reveal'
 
-const field = 'mt-1 w-full rounded-xl border border-brand-100 bg-white px-4 py-3 text-base focus:border-brand-500'
+const field = 'mt-1 w-full rounded-xl border border-line bg-surface px-4 py-3 text-base text-ink focus:border-brand-500'
 
 export default function Contact() {
   const [status, setStatus] = useState('idle') // idle | sending | success | error
@@ -40,7 +40,7 @@ export default function Contact() {
           </div>
         </Reveal>
         <Reveal delay={0.1}>
-          <form onSubmit={handleSubmit} className="space-y-4 rounded-2xl bg-white p-6 shadow-card sm:p-8" noValidate={false}>
+          <form onSubmit={handleSubmit} className="space-y-4 rounded-2xl bg-card p-6 shadow-card sm:p-8" noValidate={false}>
             <div>
               <label htmlFor="name" className="text-sm font-semibold">Your name</label>
               <input id="name" name="name" required autoComplete="name" className={field} />

@@ -1,5 +1,6 @@
 /** Brand colours + fonts live here and are reused everywhere via Tailwind classes. */
 export default {
+  darkMode: 'class',
   content: ['./index.html', './src/**/*.{js,jsx}'],
   theme: {
     extend: {
@@ -20,9 +21,17 @@ export default {
           600: '#C2410C', // white text on this = AA contrast (5.2:1)
           700: '#9A3412',
         },
-        cream: '#FFF9F3',
-        ink: '#1B2733',
-        muted: '#475467', // AA on white and cream
+        // Theme-aware colours: values come from CSS variables in src/index.css (light + .dark)
+        surface: 'rgb(var(--c-surface) / <alpha-value>)',
+        card: 'rgb(var(--c-card) / <alpha-value>)',
+        cream: 'rgb(var(--c-cream) / <alpha-value>)',
+        alt: 'rgb(var(--c-alt) / <alpha-value>)',
+        tint: 'rgb(var(--c-tint) / <alpha-value>)',
+        line: 'rgb(var(--c-line) / <alpha-value>)',
+        head: 'rgb(var(--c-head) / <alpha-value>)',
+        link: 'rgb(var(--c-link) / <alpha-value>)',
+        ink: 'rgb(var(--c-ink) / <alpha-value>)',
+        muted: 'rgb(var(--c-muted) / <alpha-value>)', // AA on surface in both themes
       },
       fontFamily: {
         heading: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],

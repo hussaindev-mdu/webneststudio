@@ -9,6 +9,7 @@ import FAQ from './components/FAQ'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 import WhatsAppButton from './components/WhatsAppButton'
+import MouseCursor3D from './components/MouseCursor3D'
 
 export default function App() {
   return (
@@ -16,8 +17,8 @@ export default function App() {
       <Header />
       <main>
         <Hero />
-        <Problems />
         <Portfolio />
+        <Problems />
         <Pricing />
         <Process />
         <About />
@@ -26,6 +27,7 @@ export default function App() {
       </main>
       <Footer />
       <WhatsAppButton />
+      <MouseCursor3D />
     </>
   )
 }

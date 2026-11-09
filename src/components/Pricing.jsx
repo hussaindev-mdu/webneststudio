@@ -4,7 +4,7 @@ import Reveal from './Reveal'
 
 export default function Pricing() {
   return (
-    <section id="pricing" className="section bg-white">
+    <section id="pricing" className="section bg-surface">
       <div className="container-x">
         <Reveal>
           <h2 className="section-title">{pricing.title}</h2>
@@ -13,18 +13,24 @@ export default function Pricing() {
         <div className="mx-auto mt-12 grid max-w-6xl gap-6 md:grid-cols-3">
           {pricing.packages.map((pkg, i) => (
             <Reveal key={pkg.name} delay={i * 0.08}>
-              <div className={`relative flex h-full flex-col rounded-2xl p-6 sm:p-8 ${pkg.popular ? 'bg-brand-900 text-white shadow-card ring-4 ring-accent-500/40' : 'border border-brand-100 bg-cream'}`}>
+              <div className={`relative flex h-full flex-col rounded-2xl p-6 sm:p-8 ${pkg.popular ? 'bg-brand-900 text-white shadow-card ring-4 ring-accent-500/40 dark:bg-brand-800' : 'border border-line bg-cream'}`}>
                 {(pkg.badge || pkg.popular) && (
                   <span className="absolute -top-3 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full bg-accent-600 px-4 py-1 text-xs font-bold uppercase tracking-wide text-white">{pkg.badge || 'Most Popular'}</span>
                 )}
                 <h3 className={`text-xl font-bold ${pkg.popular ? '!text-white' : ''}`}>{pkg.name}</h3>
                 <p className={`mt-1 text-sm ${pkg.popular ? 'text-brand-100' : 'text-muted'}`}>{pkg.description}</p>
-                <p className="mt-5 flex flex-wrap items-baseline gap-x-2">
-                  <span className={`font-heading text-4xl font-extrabold ${pkg.popular ? 'text-white' : 'text-brand-900'}`}>{pkg.price}</span>
+                {pkg.originalPrice && pricing.offer && (
+                  <p className={`mt-4 inline-block rounded-full px-3 py-1 text-xs font-bold uppercase tracking-wide ${pkg.popular ? 'bg-white/15 text-orange-200' : 'bg-accent-50 text-accent-700 dark:bg-accent-500/15 dark:text-orange-300'}`}>{pricing.offer}</p>
+                )}
+                <p className="mt-3 flex flex-wrap items-baseline gap-x-2">
+                  {pkg.originalPrice && (
+                    <span className={`text-xl font-semibold line-through ${pkg.popular ? 'text-brand-100' : 'text-muted'}`}><span className="sr-only">Original price </span>{pkg.originalPrice}</span>
+                  )}
+                  <span className={`font-heading text-4xl font-extrabold ${pkg.popular ? 'text-white' : 'text-head'}`}>{pkg.price}</span>
                   <span className={`text-sm ${pkg.popular ? 'text-brand-100' : 'text-muted'}`}>{pkg.period}</span>
                 </p>
                 {pkg.highlight && (
-                  <p className="mt-5 rounded-xl bg-accent-50 px-4 py-3 text-center text-sm font-bold text-accent-700 ring-1 ring-accent-500/30">{pkg.highlight}</p>
+                  <p className="mt-5 rounded-xl bg-accent-50 px-4 py-3 text-center text-sm font-bold text-accent-700 ring-1 dark:bg-accent-500/15 dark:text-orange-300 ring-accent-500/30">{pkg.highlight}</p>
                 )}
                 <ul className="mt-6 flex-1 space-y-3">
                   {pkg.features.map((f) => (
