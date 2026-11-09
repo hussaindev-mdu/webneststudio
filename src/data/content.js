@@ -83,16 +83,8 @@ export const pricing = {
       price: '₹9,999',
       period: 'lifetime access',
       description: 'A clean, professional online presence.',
-      features: ['1–5 pages', 'Mobile-friendly design', 'Contact form', 'WhatsApp button', 'Google Maps', '6-day delivery'],
+      features: ['1–5 pages', 'Mobile-friendly design', 'Contact form', 'WhatsApp button', 'Google Maps', '6-day delivery', 'Need an admin panel to manage your content? Additional charges apply'],
       popular: false,
-    },
-    {
-      name: 'Business',
-      price: '₹24,999',
-      period: 'lifetime access',
-      description: 'Everything you need to get found and get enquiries.',
-      features: ['5–7 pages', 'Admin panel access (add, view, edit & delete content)', 'Basic SEO', 'Google Business Profile setup', 'Everything in Starter'],
-      popular: true,
     },
     {
       name: 'Maintenance',
@@ -147,7 +139,7 @@ export const about = {
 export const faq = {
   title: 'Frequently asked questions',
   items: [
-    { q: 'How long does it take?', a: 'Starter websites are ready in 6 days. Business websites with more pages usually take 7–10 days, depending on how quickly I receive your content and feedback.' },
+    { q: 'How long does it take?', a: 'Your website is usually ready in 6 days, depending on how quickly I receive your content and feedback.' },
     { q: 'How does payment work?', a: 'You pay 25% advance to start and the remaining 75% after you approve the final website. You can pay by UPI or bank transfer.' },
     { q: 'Do I need to buy a domain and hosting?', a: 'Yes, but I handle the setup for you. A domain typically costs around ₹800–1,200 per year and hosting can be free or low-cost. I will guide you on the best options.' },
     { q: 'How many revisions do I get?', a: 'You get unlimited small tweaks during the design stage and up to 3 rounds of major revisions, so the final result is exactly what you want.' },

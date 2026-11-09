@@ -10,7 +10,7 @@ export default function Pricing() {
           <h2 className="section-title">{pricing.title}</h2>
           <p className="section-sub">{pricing.subtitle}</p>
         </Reveal>
-        <div className="mt-12 grid gap-6 md:grid-cols-3">
+        <div className="mx-auto mt-12 grid max-w-4xl gap-6 md:grid-cols-2">
           {pricing.packages.map((pkg, i) => (
             <Reveal key={pkg.name} delay={i * 0.08}>
               <div className={`relative flex h-full flex-col rounded-2xl p-6 sm:p-8 ${pkg.popular ? 'bg-brand-900 text-white shadow-card ring-4 ring-accent-500/40' : 'border border-brand-100 bg-cream'}`}>
