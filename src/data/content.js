@@ -7,7 +7,7 @@ export const brand = {
   tagline: 'Websites that bring you customers',
   owner: 'Hussain',
   city: 'Your City', // REPLACE
-  niche: 'clinics', // REPLACE e.g. "restaurants", "salons"
+  niche: 'businesses',
   whatsappNumber: '919566831055', // country code + number, digits only (no + or spaces)
   whatsappDisplay: '+91 95668 31055',
   email: 'hussaindev07@gmail.com',
@@ -34,6 +34,7 @@ export const hero = {
   headline: 'Professional websites for {niche} in {city}, ready in 6 days',
   subtext:
     'I design fast, mobile-friendly websites that help local customers find you on Google, trust your business and contact you in one tap.',
+  eyebrow: 'Websites starting from ₹5,999',
   primaryCta: 'See My Work',
   secondaryCta: 'Chat on WhatsApp',
   badges: ['6-day delivery', 'Mobile-first', 'No hidden fees'],
@@ -77,14 +78,23 @@ export const pricing = {
   title: 'Simple, honest pricing',
   subtitle: 'Pay once and get lifetime access to your website. No surprise costs.',
   cta: 'Get Started',
+  finePrint: '* Prices exclude domain charges.',
   packages: [
+    {
+      name: 'Basic',
+      price: '₹5,999',
+      period: 'lifetime access',
+      description: 'A simple, professional website to get you online.',
+      features: ['1–5 pages', 'Mobile-friendly design', 'WhatsApp button', 'Google Maps', '6-day delivery', 'No contact form or 3D animations'],
+      popular: false,
+    },
     {
       name: 'Starter',
       price: '₹9,999',
       period: 'lifetime access',
-      description: 'A clean, professional online presence.',
-      features: ['1–5 pages', 'Mobile-friendly design', 'Contact form', 'WhatsApp button', 'Google Maps', '6-day delivery', 'Need an admin panel to manage your content? Additional charges apply'],
-      popular: false,
+      description: 'Everything in Basic, plus a contact form and 3D animations.',
+      features: ['Everything in Basic', 'Contact form', '3D animations', '1–5 pages', '6-day delivery', 'Need an admin panel to manage your content? Additional charges apply'],
+      popular: true,
     },
     {
       name: 'Maintenance',
