@@ -1,3 +1,4 @@
+import { Link, useLocation } from 'react-router-dom'
 import { brand } from '../data/content'
 
 export function LogoIcon({ className = 'h-8 w-8' }) {
@@ -12,13 +13,16 @@ export function LogoIcon({ className = 'h-8 w-8' }) {
 
 export default function Logo({ light = false, small = false }) {
   const web = brand.name.replace('Studio', '')
+  const home = useLocation().pathname === '/'
+  const Tag = home ? 'a' : Link
+  const target = home ? { href: '#top' } : { to: '/' }
   return (
-    <a href="#top" className="flex items-center gap-2" aria-label={`${brand.name} home`}>
+    <Tag {...target} className="flex items-center gap-2" aria-label={`${brand.name} home`}>
       <LogoIcon className={small ? 'h-8 w-8' : 'h-9 w-9'} />
       <span className={`font-heading text-xl font-extrabold tracking-tight ${light ? 'text-white' : 'text-head'}`}>
         {web}
         <span className={light ? 'text-orange-300' : 'text-accent-600'}>Studio</span>
       </span>
-    </a>
+    </Tag>
   )
 }

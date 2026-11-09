@@ -22,17 +22,18 @@ export const defaultWhatsAppMessage =
   "Hi WebNestStudio, I'm interested in a website for my business"
 
 export const nav = [
-  { label: 'Project Demo', href: '#portfolio' },
-  { label: 'Pricing', href: '#pricing' },
+  { label: 'Project Demo', href: '/portfolio/' },
+  { label: 'Services', href: '#services', menu: true },
+  { label: 'Pricing', href: '/pricing/' },
   { label: 'Process', href: '#process' },
   { label: 'About', href: '#about' },
   { label: 'FAQ', href: '#faq' },
-  { label: 'Contact Us', href: '#contact' },
+  { label: 'Contact Us', href: '/contact/' },
 ]
 
 export const hero = {
   // {niche} and {city} are filled in automatically from `brand`
-  headline: 'Professional websites for {niche} in {city}, ready in 6 days',
+  headline: 'Professional websites for {niche} across India, ready in 6 days',
   subtext:
     'I design fast, mobile-friendly websites that help local customers find you on Google, trust your business and contact you in one tap.',
   eyebrow: 'Websites starting from ₹5,999',
@@ -174,11 +175,11 @@ export const contact = {
 
 export const footer = {
   links: [
-    { label: 'Project Demo', href: '#portfolio' },
-    { label: 'Pricing', href: '#pricing' },
+    { label: 'Project Demo', href: '/portfolio/' },
+    { label: 'Pricing', href: '/pricing/' },
     { label: 'Process', href: '#process' },
     { label: 'FAQ', href: '#faq' },
-    { label: 'Contact', href: '#contact' },
+    { label: 'Contact', href: '/contact/' },
   ],
 }
 

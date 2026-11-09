@@ -1,10 +1,17 @@
 import React from 'react'
-import { createRoot } from 'react-dom/client'
+import { createRoot, hydrateRoot } from 'react-dom/client'
+import { BrowserRouter } from 'react-router-dom'
 import App from './App.jsx'
 import './index.css'
 
-createRoot(document.getElementById('root')).render(
+const app = (
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
   </React.StrictMode>
 )
+const root = document.getElementById('root')
+// prerendered pages are hydrated; the dev server renders from scratch
+if (root.hasChildNodes()) hydrateRoot(root, app)
+else createRoot(root).render(app)

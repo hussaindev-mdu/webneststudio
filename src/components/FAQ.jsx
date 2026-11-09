@@ -3,14 +3,14 @@ import { ChevronDown } from 'lucide-react'
 import { faq } from '../data/content'
 import Reveal from './Reveal'
 
-export default function FAQ() {
+export default function FAQ({ items = faq.items, title = faq.title }) {
   const [open, setOpen] = useState(0)
   return (
     <section id="faq" className="section bg-surface">
       <div className="container-x max-w-3xl">
-        <Reveal><h2 className="section-title">{faq.title}</h2></Reveal>
+        <Reveal><h2 className="section-title">{title}</h2></Reveal>
         <div className="mt-8 divide-y divide-line rounded-2xl border border-line">
-          {faq.items.map((item, i) => {
+          {items.map((item, i) => {
             const isOpen = open === i
             return (
               <div key={item.q}>

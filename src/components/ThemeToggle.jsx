@@ -10,18 +10,21 @@ function readTheme() {
 }
 
 export default function ThemeToggle({ className = '' }) {
-  const [theme, setTheme] = useState(readTheme)
+  // start light so server and client markup match; the saved theme is read after mount
+  const [theme, setTheme] = useState('light')
+  useEffect(() => { setTheme(readTheme()) }, [])
 
-  useEffect(() => {
-    document.documentElement.classList.toggle('dark', theme === 'dark')
-    try { localStorage.setItem('theme', theme) } catch { /* storage may be blocked */ }
-  }, [theme])
+  function choose(next) {
+    setTheme(next)
+    document.documentElement.classList.toggle('dark', next === 'dark')
+    try { localStorage.setItem('theme', next) } catch { /* storage may be blocked */ }
+  }
 
   const dark = theme === 'dark'
   return (
     <button
       type="button"
-      onClick={() => setTheme(dark ? 'light' : 'dark')}
+      onClick={() => choose(dark ? 'light' : 'dark')}
       aria-label={dark ? 'Switch to light theme' : 'Switch to dark theme'}
       className={`rounded-full p-2 text-head transition hover:bg-tint ${className}`}
     >
