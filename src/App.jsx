@@ -14,6 +14,8 @@ import WhatsAppButton from './components/WhatsAppButton'
 import MouseCursor3D from './components/MouseCursor3D'
 import ServiceLinks from './components/ServiceLinks'
 import LandingPage from './components/LandingPage'
+import PrivacyPolicy from './components/PrivacyPolicy'
+import TermsPage from './components/TermsPage'
 import Seo from './components/Seo'
 import { pages } from './data/pages'
 import { homeMeta, homeSchema } from './data/seo'
@@ -32,7 +34,6 @@ function Layout() {
       <main><Outlet /></main>
       <Footer />
       <WhatsAppButton />
-      <MouseCursor3D />
     </>
   )
 }
@@ -41,15 +42,17 @@ function Home() {
   return (
     <>
       <Seo meta={homeMeta} schema={homeSchema} />
+      {/* the 3D mouse cursor only applies to the home page's 3D laptop, so it mounts here only */}
+      <MouseCursor3D />
       <Hero />
-      <Portfolio />
+      <Portfolio preview title="Featured projects" subtitle="A quick look at our work. See every project, with live demos, on the portfolio page." moreHref="/portfolio/" moreLabel="View all website design projects" />
       <Problems />
       <ServiceLinks />
-      <Pricing />
+      <Pricing previewFeatures={3} title="Website packages at a glance" subtitle="One-time website development fee. The full feature list for each package is on our pricing page." moreHref="/pricing/" moreLabel="See full website development pricing" />
       <Process />
       <About />
       <FAQ />
-      <Contact />
+      <Contact moreHref="/contact/" moreLabel="More ways to contact WebNestStudio" />
     </>
   )
 }
@@ -70,6 +73,8 @@ export default function App() {
       <Route element={<Layout />}>
         <Route index element={<Home />} />
         {pages.map((p) => <Route key={p.slug} path={p.slug} element={<LandingPage page={p} />} />)}
+        <Route path="privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="terms-and-conditions" element={<TermsPage />} />
         <Route path="*" element={<NotFound />} />
       </Route>
     </Routes>

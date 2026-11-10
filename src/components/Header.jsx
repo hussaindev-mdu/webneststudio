@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { Menu, X } from 'lucide-react'
+import { Menu, X, ChevronDown } from 'lucide-react'
 import Logo from './Logo'
 import ThemeToggle from './ThemeToggle'
 import { Link } from 'react-router-dom'
@@ -29,14 +29,14 @@ export default function Header() {
         <nav className="hidden items-center gap-8 md:flex" aria-label="Main">
           {nav.map((l) => l.menu ? (
             <div key={l.href} className="group relative">
-              <a href={a(l.href)} className="text-sm font-medium text-ink hover:text-accent-600" aria-haspopup="true">{l.label}</a>
-              <ul className="invisible absolute left-1/2 top-full z-50 w-64 -translate-x-1/2 pt-4 opacity-0 transition group-focus-within:visible group-focus-within:opacity-100 group-hover:visible group-hover:opacity-100">
-                <div className="rounded-xl border border-line bg-surface p-2 shadow-card">
+              <a href={a(l.href)} className="inline-flex items-center gap-1 text-sm font-medium text-ink hover:text-accent-600" aria-haspopup="true">{l.label}<ChevronDown size={14} aria-hidden className="transition-transform group-hover:rotate-180 group-focus-within:rotate-180" /></a>
+              <div className="invisible absolute left-1/2 top-full z-50 w-64 -translate-x-1/2 pt-4 opacity-0 transition group-focus-within:visible group-focus-within:opacity-100 group-hover:visible group-hover:opacity-100">
+                <ul className="rounded-xl border border-line bg-surface p-2 shadow-card">
                   {servicePages.map((p) => (
                     <li key={p.slug}><Link to={pathFor(p.slug)} className="block rounded-lg px-3 py-2 text-sm font-medium text-ink hover:bg-tint hover:text-accent-600">{p.nav}</Link></li>
                   ))}
-                </div>
-              </ul>
+                </ul>
+              </div>
             </div>
           ) : (
             <a key={l.href} href={a(l.href)} className="text-sm font-medium text-ink hover:text-accent-600">{l.label}</a>

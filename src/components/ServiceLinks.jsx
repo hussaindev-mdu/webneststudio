@@ -16,11 +16,11 @@ export default function ServiceLinks() {
         </Reveal>
         <ul className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {items.map((p) => (
-            <li key={p.slug}>
-              <Link to={pathFor(p.slug)} className="block h-full rounded-2xl border border-line bg-cream p-6 hover:border-accent-600">
-                <h3 className="text-lg font-bold">{p.nav}</h3>
-                <p className="mt-2 text-muted">{p.description}</p>
-              </Link>
+            <li key={p.slug} className="relative h-full rounded-2xl border border-line bg-cream p-6 hover:border-accent-600">
+              <h3 className="text-lg font-bold">
+                <Link to={pathFor(p.slug)} className="after:absolute after:inset-0 after:rounded-2xl">{p.nav}</Link>
+              </h3>
+              <p className="mt-2 text-muted">{p.description}</p>
             </li>
           ))}
         </ul>

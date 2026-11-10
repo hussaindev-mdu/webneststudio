@@ -14,7 +14,12 @@ import { metaFor, pathFor, breadcrumbSchema, serviceSchema, faqSchema } from '..
 
 // One template for every extra SEO page (services, pricing, portfolio, contact).
 export default function LandingPage({ page }) {
-  const related = (page.related || []).map((s) => pages.find((p) => p.slug === s)).filter(Boolean)
+  // the closing band already links to Pricing, so don't repeat it in the related list
+  const bandHasPricing = page.slug !== 'contact' && page.slug !== 'pricing'
+  const related = (page.related || [])
+    .filter((s) => !(s === 'pricing' && bandHasPricing))
+    .map((s) => pages.find((p) => p.slug === s))
+    .filter(Boolean)
   const demo = page.demo && portfolio.projects.find((p) => p.name === page.demo)
   const isService = page.slug.endsWith('design') || page.slug === 'website-development'
   const schema = [breadcrumbSchema(page), isService && serviceSchema(page), page.faq && faqSchema(page.faq)]
@@ -33,7 +38,7 @@ export default function LandingPage({ page }) {
           <h1 className="text-balance text-3xl font-extrabold leading-tight tracking-normal sm:text-5xl sm:tracking-tight">{page.h1}</h1>
           <p className="mt-5 max-w-3xl text-lg text-muted">{page.intro}</p>
           <div className="mt-6 flex flex-col gap-3 sm:flex-row">
-            <Link to="/contact/" className="btn-primary">Get a Free Quote</Link>
+            {page.slug !== 'contact' && <Link to="/contact/" className="btn-primary">Get a Free Quote</Link>}
             <a href={whatsappLink(`Hi WebNestStudio, I'm interested in ${page.nav.toLowerCase()}.`)} target="_blank" rel="noopener noreferrer" className="btn-whatsapp">
               <WhatsAppIcon /> Chat on WhatsApp
             </a>
@@ -87,11 +92,11 @@ export default function LandingPage({ page }) {
       {related.length > 0 && (
         <section className="section bg-alt" aria-labelledby="related-title">
           <div className="container-x">
-            <h2 id="related-title" className="section-title">Related services</h2>
-            <ul className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            <h2 id="related-title" className="section-title">{page.slug === 'contact' ? 'Explore more' : 'Related services'}</h2>
+            <ul className={`mt-6 grid gap-4 sm:grid-cols-2 ${related.length > 4 ? 'lg:grid-cols-5' : 'lg:grid-cols-4'}`}>
               {related.map((p) => (
                 <li key={p.slug}>
-                  <Link to={pathFor(p.slug)} className="block h-full rounded-2xl bg-card p-5 font-semibold text-head shadow-card hover:text-accent-600">{p.nav}</Link>
+                  <Link to={pathFor(p.slug)} className="block h-full rounded-2xl bg-card p-5 font-semibold text-head shadow-card hover:text-accent-600">{p.linkText || p.nav}</Link>
                 </li>
               ))}
             </ul>
@@ -99,7 +104,7 @@ export default function LandingPage({ page }) {
         </section>
       )}
 
-      {page.slug === 'contact' ? <Contact /> : <CtaBand />}
+      {page.slug === 'contact' ? <Contact /> : <CtaBand showPricing={page.slug !== 'pricing'} />}
     </>
   )
 }

@@ -1,9 +1,11 @@
-import { Zap, MessagesSquare, ShieldCheck } from 'lucide-react'
-import { about, brand } from '../data/content'
+import { Link } from 'react-router-dom'
+import { Zap, MessagesSquare, Tag, Eye, Wrench } from 'lucide-react'
+import { about, brand, whatsappLink } from '../data/content'
+import { WhatsAppIcon } from './Icons'
 import Reveal from './Reveal'
 import { LogoIcon } from './Logo'
 
-const icons = { zap: Zap, message: MessagesSquare, shield: ShieldCheck }
+const icons = { zap: Zap, message: MessagesSquare, tag: Tag, eye: Eye, wrench: Wrench }
 
 export default function About() {
   return (
@@ -27,7 +29,7 @@ export default function About() {
           {about.bio.map((p) => (
             <p key={p} className="mt-4 text-lg text-muted">{p}</p>
           ))}
-          <ul className="mt-8 grid gap-4 sm:grid-cols-3">
+          <ul className="mt-8 grid gap-4 sm:grid-cols-2">
             {about.reasons.map((r) => {
               const Icon = icons[r.icon] || Zap
               return (
@@ -39,6 +41,17 @@ export default function About() {
               )
             })}
           </ul>
+          <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+            <Link to="/contact/" className="btn-primary">Get a Free Quote</Link>
+            <a href={whatsappLink()} target="_blank" rel="noopener noreferrer" className="btn-whatsapp">
+              <WhatsAppIcon /> Chat on WhatsApp
+            </a>
+          </div>
+          <p className="mt-5 flex flex-wrap gap-x-6 gap-y-2">
+            {about.links.map((l) => (
+              <Link key={l.href} to={l.href} className="font-semibold text-link hover:text-accent-600">{l.label}</Link>
+            ))}
+          </p>
         </Reveal>
       </div>
     </section>

@@ -1,5 +1,7 @@
 import { brand } from './content'
 import { pages } from './pages'
+import { privacy } from './privacy'
+import { terms } from './terms'
 
 export const SITE = {
   url: 'https://webneststudio.live',
@@ -12,15 +14,15 @@ export const urlFor = (slug) => SITE.url + pathFor(slug)
 
 export const homeMeta = {
   path: '/',
-  title: 'Affordable Website Development in India from ₹5,999 | WebNestStudio',
+  title: 'Affordable Website Development in India | WebNestStudio',
   description:
-    'Fast, mobile-friendly websites for restaurants, clinics, real estate and small businesses across India. Packages from ₹5,999, live in 6 days.',
+    'Websites for restaurants, clinics, real estate and small businesses across India from ₹5,999. Delivered in 6 working days after advance payment and content.',
 }
 
 export const metaFor = (page) => ({ path: pathFor(page.slug), title: page.title, description: page.description })
 
 // every indexable page, used for prerendering and the sitemap
-export const routes = [homeMeta, ...pages.map(metaFor)]
+export const routes = [homeMeta, ...pages.map(metaFor), metaFor(privacy), metaFor(terms)]
 
 const ORG_ID = `${SITE.url}/#organization`
 

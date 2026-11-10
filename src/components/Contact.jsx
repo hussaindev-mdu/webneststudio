@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import { Mail, CheckCircle2, AlertCircle, Loader2 } from 'lucide-react'
 import { brand, contact, formspreeId, whatsappLink } from '../data/content'
 import { WhatsAppIcon } from './Icons'
@@ -6,7 +7,7 @@ import Reveal from './Reveal'
 
 const field = 'mt-1 w-full rounded-xl border border-line bg-surface px-4 py-3 text-base text-ink focus:border-brand-500'
 
-export default function Contact() {
+export default function Contact({ moreHref, moreLabel }) {
   const [status, setStatus] = useState('idle') // idle | sending | success | error
 
   async function handleSubmit(e) {
@@ -19,7 +20,9 @@ export default function Contact() {
         headers: { Accept: 'application/json' },
         body: new FormData(form),
       })
-      if (res.ok) {
+      // only report success when Formspree confirms it (HTTP 2xx and not an explicit ok:false)
+      const data = await res.json().catch(() => ({}))
+      if (res.ok && data.ok !== false) {
         setStatus('success')
         form.reset()
       } else setStatus('error')
@@ -38,9 +41,11 @@ export default function Contact() {
             <a href={whatsappLink()} target="_blank" rel="noopener noreferrer" className="btn-whatsapp"><WhatsAppIcon /> WhatsApp {brand.whatsappDisplay}</a>
             <a href={`mailto:${brand.email}`} className="btn border-2 border-white text-white hover:bg-white hover:text-brand-900"><Mail size={20} aria-hidden /> {brand.email}</a>
           </div>
+          {moreHref && <p className="mt-5"><Link to={moreHref} className="text-sm font-semibold text-orange-200 underline hover:text-white">{moreLabel}</Link></p>}
         </Reveal>
         <Reveal delay={0.1}>
           <form onSubmit={handleSubmit} className="space-y-4 rounded-2xl bg-card p-6 shadow-card sm:p-8" noValidate={false}>
+            <p className="text-sm text-muted">{contact.guidance}</p>
             <div>
               <label htmlFor="name" className="text-sm font-semibold">Your name</label>
               <input id="name" name="name" required autoComplete="name" className={field} />
@@ -54,12 +59,17 @@ export default function Contact() {
               <input id="phone" name="phone" type="tel" required autoComplete="tel" inputMode="tel" className={field} />
             </div>
             <div>
+              <label htmlFor="email" className="text-sm font-semibold">Email <span className="font-normal text-muted">(optional)</span></label>
+              <input id="email" name="email" type="email" autoComplete="email" inputMode="email" className={field} />
+            </div>
+            <div>
               <label htmlFor="message" className="text-sm font-semibold">Message</label>
               <textarea id="message" name="message" rows="4" required className={field} />
             </div>
             <button type="submit" disabled={status === 'sending'} className="btn-primary w-full disabled:opacity-70">
               {status === 'sending' ? <><Loader2 className="animate-spin" size={20} aria-hidden /> Sending…</> : 'Send Message'}
             </button>
+            <p className="text-center text-xs text-muted">{contact.privacyNote}</p>
             <div aria-live="polite">
               {status === 'success' && (
                 <p className="flex items-start gap-2 rounded-xl bg-green-50 p-3 text-green-800"><CheckCircle2 size={20} className="mt-0.5 shrink-0" aria-hidden /> {contact.successMessage}</p>

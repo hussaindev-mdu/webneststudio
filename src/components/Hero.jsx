@@ -28,6 +28,7 @@ export default function Hero() {
               <li key={b} className="flex items-center gap-1.5"><Check size={16} className="text-accent-600" aria-hidden /> {b}</li>
             ))}
           </ul>
+          {hero.deliveryNote && <p className="mt-4 max-w-xl text-xs text-muted">{hero.deliveryNote}</p>}
         </Reveal>
         <Reveal delay={0.15}>
           <Hero3D />

@@ -30,7 +30,13 @@ export default function Footer() {
             {pages.map((p) => <li key={p.slug}><Link to={pathFor(p.slug)} className="hover:text-white">{p.nav}</Link></li>)}
           </ul>
         </nav>
-        <p className="mt-8 text-sm">© {new Date().getFullYear()} {brand.name}. All rights reserved.</p>
+        <div className="mt-8 flex flex-wrap items-center justify-between gap-x-6 gap-y-2 text-sm">
+          <p>© {new Date().getFullYear()} {brand.name}. All rights reserved.</p>
+          <div className="flex flex-wrap gap-x-6 gap-y-2">
+            <Link to="/privacy-policy/" className="font-medium underline-offset-4 hover:text-white hover:underline">Privacy Policy</Link>
+            <Link to="/terms-and-conditions/" className="font-medium underline-offset-4 hover:text-white hover:underline">Terms &amp; Conditions</Link>
+          </div>
+        </div>
       </div>
     </footer>
   )

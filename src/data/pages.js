@@ -6,16 +6,16 @@ export const pages = [
     slug: 'website-development',
     nav: 'Website Development',
     title: 'Website Development Company in India | WebNestStudio',
-    description: 'Affordable website development for Indian businesses. Fast, mobile-friendly sites delivered in 6 days, from ₹5,999, with the first year of maintenance free.',
+    description: 'Website development from ₹5,999, delivered in 6 working days after advance payment and content. 12 months of free maintenance from the website launch date.',
     h1: 'Affordable website development for Indian businesses',
-    intro: 'WebNestStudio is a small website development company in India that builds fast, clean, mobile-friendly websites for local businesses. You get a fixed price, a 6-day delivery and a direct line to the person building your site.',
+    intro: 'WebNestStudio is a small website development company in India that builds fast, clean, mobile-friendly websites for local businesses. You get a fixed price, 6-working-day delivery and a direct line to the person building your site.',
     includes: [
       { title: 'Mobile-first design', text: 'Most of your visitors are on phones, so every page is designed for a small screen first and then scaled up.' },
       { title: 'Search-friendly structure', text: 'Clean headings, page titles, descriptions, fast loading and a sitemap give Google a clear picture of your business.' },
       { title: 'One-tap contact', text: 'WhatsApp, call and Google Maps buttons let customers reach you without typing a thing.' },
       { title: 'Contact form (Starter)', text: 'Enquiries land straight in your email inbox, with a WhatsApp fallback if the form is ever down.' },
-      { title: '6-day delivery', text: 'Send your content and we deliver a working site in about six days.' },
-      { title: 'Free first-year maintenance', text: 'Content updates, backups and small changes are covered for the first year.' },
+      { title: '6-working-day delivery', text: 'We deliver in 6 working days after receiving the advance payment and all required customer content and materials.' },
+      { title: '12 months free maintenance', text: '12 months of free maintenance from the website launch date. It covers bug fixes, minor text updates and minor image updates. Website backups are not included.' },
     ],
     sections: [
       {
@@ -39,11 +39,11 @@ export const pages = [
     ],
     faq: [
       { q: 'What is the difference between website design and website development?', a: 'Design is how the site looks and is laid out. Development is building it so it works on every device, loads quickly and can be published. We do both together.' },
-      { q: 'How long does it take to build a website?', a: 'About 6 days from the time we receive your content, depending on how quickly you share feedback.' },
+      { q: 'How long does it take to build a website?', a: 'We deliver in 6 working days after receiving the advance payment and all required customer content and materials. Delays in content, approvals or feedback extend the timeline by the same number of days.' },
       { q: 'Will my website show up on Google?', a: 'We build every site with a search-friendly structure, but ranking depends on competition and time. We do not promise a specific position.' },
-      { q: 'Can you update my website later?', a: 'Yes. The first year of maintenance is free, and after that you can continue with the maintenance plan.' },
+      { q: 'Can you update my website later?', a: 'Yes. Every website includes 12 months of free maintenance from the website launch date. After that, you can continue with the maintenance plan.' },
     ],
-    related: ['business-website-design', 'restaurant-website-design', 'clinic-website-design', 'real-estate-website-design'],
+    related: ['business-website-design', 'restaurant-website-design', 'clinic-website-design', 'real-estate-website-design', 'portfolio'],
     show: [],
   },
   {
@@ -72,9 +72,9 @@ export const pages = [
       {
         heading: 'How our business website design process works',
         paras: [
-          'We start with a free call about your customers and goals. Then we send a design preview of your home page. You request changes, we refine, and only then do we launch and connect your domain. Most small business sites are live in 6 days.',
+          'We start with a free call about your customers and goals. Then we send a design preview of your home page. You request changes, we refine, and only then do we launch and connect your domain. We deliver in 6 working days after receiving the advance payment and all required customer content and materials.',
         ],
-        bullets: ['Free call and content checklist', 'Homepage design preview', 'Revisions until you are happy', 'Launch, domain setup and a short walkthrough'],
+        bullets: ['Free call and content checklist', 'Homepage design preview', 'Unlimited revisions within the agreed scope', 'Launch, domain setup and a short walkthrough'],
       },
       {
         heading: 'What a small business website should include',
@@ -87,14 +87,14 @@ export const pages = [
       { q: 'Can I add online booking or payments?', a: 'Simple booking through WhatsApp is included. Anything more advanced, like a custom admin panel, is quoted separately.' },
       { q: 'Is a social media page enough for my business?', a: 'A social page helps, but you do not control it and it is hard to find on Google. A website you own is a stable home for your services, contact details and customer enquiries.' },
     ],
-    related: ['website-development', 'restaurant-website-design', 'clinic-website-design', 'pricing'],
+    related: ['website-development', 'restaurant-website-design', 'clinic-website-design', 'real-estate-website-design', 'portfolio'],
     show: [],
   },
   {
     slug: 'restaurant-website-design',
     nav: 'Restaurant Website Design',
     title: 'Restaurant Website Design in India | WebNestStudio',
-    description: 'Restaurant website design with menu, photo gallery, Google Maps and one-tap table booking on WhatsApp. Starting at ₹5,999, ready in 6 days.',
+    description: 'Restaurant website design with menu, gallery and WhatsApp booking from ₹5,999. Delivered in 6 working days after advance payment and content.',
     h1: 'Restaurant website design with menu, gallery and easy booking',
     intro: 'Hungry customers decide in seconds. We design restaurant websites that show your food, your menu and your location straight away, and make booking a table a single tap.',
     includes: [
@@ -127,7 +127,7 @@ export const pages = [
       { q: 'Can customers see my full menu on the website?', a: 'Yes. We build the menu as a normal page with categories and prices, and you can ask us to update it when it changes.' },
       { q: 'Can guests book a table online?', a: 'Booking works through a WhatsApp button that sends a pre-filled message. The Starter package also includes a contact form.' },
       { q: 'Can I link my Zomato or Swiggy page?', a: 'Yes, we add links or buttons to any ordering platform you use.' },
-      { q: 'Can I show daily specials or festival offers?', a: 'Yes. Offers and specials can be added as a banner or a short section, and we can update them for you during your free maintenance year.' },
+      { q: 'Can I show daily specials or festival offers?', a: 'Yes. Offers and specials can be added as a banner or a short section, and we can update them for you during your 12 months of free maintenance.' },
     ],
     related: ['business-website-design', 'website-development', 'clinic-website-design', 'portfolio'],
     show: [],
@@ -136,7 +136,7 @@ export const pages = [
     slug: 'clinic-website-design',
     nav: 'Clinic Website Design',
     title: 'Clinic & Doctor Website Design in India | WebNestStudio',
-    description: 'Clinic website design and doctor website development with services, doctor profile, timings, map and appointment enquiries. From ₹5,999, ready in 6 days.',
+    description: 'Clinic website design with services, doctor profile and appointment enquiries from ₹5,999. Delivered in 6 working days after advance payment and content.',
     h1: 'Clinic website design that patients can trust and use',
     intro: 'Patients look for a clinic online before they call. We build clean, calm and accurate clinic and doctor websites that show your services, your timings and how to book an appointment.',
     includes: [
@@ -173,14 +173,14 @@ export const pages = [
       { q: 'Can you add multiple doctors or branches?', a: 'Yes, within the 1 to 5 page limit, or we can quote a larger site.' },
       { q: 'What should a clinic website avoid saying?', a: 'Avoid guaranteed results, exaggerated claims and anything that identifies patients. Keep descriptions factual, and check the advertising rules that apply to your profession.' },
     ],
-    related: ['business-website-design', 'website-development', 'restaurant-website-design', 'pricing'],
+    related: ['business-website-design', 'website-development', 'restaurant-website-design', 'portfolio'],
     show: [],
   },
   {
     slug: 'real-estate-website-design',
     nav: 'Real Estate Website Design',
     title: 'Real Estate Website Design in India | WebNestStudio',
-    description: 'Real estate website design for agents and builders: property pages, photo galleries, maps and WhatsApp enquiries. Starting at ₹5,999, live in 6 days.',
+    description: 'Real estate website design with property pages, galleries and WhatsApp enquiries from ₹5,999. Delivered in 6 working days after advance payment and content.',
     h1: 'Real estate website design for agents and builders',
     intro: 'Buyers browse properties on their phones long before they call an agent. We design real estate websites that present each property clearly and turn interest into WhatsApp and phone enquiries.',
     includes: [
@@ -222,8 +222,9 @@ export const pages = [
   {
     slug: 'pricing',
     nav: 'Pricing',
+    linkText: 'Website development pricing',
     title: 'Website Development Cost in India | Packages from ₹5,999',
-    description: 'Clear website development packages in India: Basic ₹5,999, Starter ₹9,999, with the first year of maintenance free. No hidden fees.',
+    description: 'Website development packages in India: Basic ₹5,999, Starter ₹9,999. 12 months of free maintenance from the website launch date. No hidden fees.',
     h1: 'Website development cost in India: simple, fixed packages',
     intro: 'Website prices vary widely depending on who builds the site and what it includes. At WebNestStudio you pick a fixed package, so you know the cost before we start.',
     includes: [],
@@ -235,11 +236,11 @@ export const pages = [
       },
       {
         heading: 'What is included in our packages',
-        paras: ['Both packages include mobile-friendly design, a WhatsApp button, Google Maps and 6-day delivery. The Starter package adds a contact form and 3D animations. Every website comes with the first year of maintenance free.'],
+        paras: ['Both packages include mobile-friendly design, a WhatsApp button, Google Maps and 6-working-day delivery. The Starter package adds a contact form and 3D animations. Every website includes 12 months of free maintenance from the website launch date.'],
       },
       {
         heading: 'Costs outside the package',
-        paras: ['The package price is a one-time development fee. A domain name typically costs around ₹800 to ₹1,200 per year and hosting can be free or low-cost depending on the setup. We guide you through the choices and set everything up. After the free first year, maintenance is ₹375 per month billed yearly (₹4,500), or ₹500 per month billed every 6 months (₹3,000).'],
+        paras: ['The package price is a one-time development fee. A domain name typically costs around ₹800 to ₹1,200 per year and hosting can be free or low-cost depending on the setup. We guide you through the choices and set everything up. After the first 12 months, maintenance is optional: you can continue at ₹375 per month billed yearly (₹4,500), or ₹500 per month billed every 6 months (₹3,000), or manage your website yourself. Website backups are not included in the packages or the free maintenance, so you arrange your own through your hosting provider or another service.'],
       },
     ],
     faq: [
@@ -253,10 +254,11 @@ export const pages = [
   {
     slug: 'portfolio',
     nav: 'Portfolio',
+    linkText: 'Website design portfolio',
     title: 'Website Design Portfolio | WebNestStudio',
     description: 'Browse live website demos by WebNestStudio: a clinic, a restaurant and a tailoring business. See the design quality you can expect.',
     h1: 'Website design portfolio: live demos you can open',
-    intro: 'These are real websites you can open and explore on your phone or computer, covering a clinic, a restaurant and a tailoring business.',
+    intro: 'Explore sample websites and live demos built by WebNestStudio, covering a clinic, a restaurant and a tailoring business. Each project is labelled as a demo or a client project, and you can open every one on your phone or computer.',
     includes: [],
     sections: [
       {
@@ -274,10 +276,11 @@ export const pages = [
   {
     slug: 'contact',
     nav: 'Contact',
+    linkText: 'Contact WebNestStudio',
     title: 'Contact a Website Developer | WebNestStudio',
     description: 'Contact WebNestStudio for a free website quote. Message us on WhatsApp, email or the form and get a proposal within 24 hours.',
     h1: 'Contact a website developer: get your free quote',
-    intro: 'Tell us about your business and what you need. We reply within 24 hours, usually much sooner, with a clear proposal and price.',
+    intro: 'WebNestStudio is independently run by Hussain and serves businesses online across India. Tell us about your business and what you need. We reply to new enquiries within 24 hours, usually much sooner, with a clear proposal and price. If you are an existing customer with a maintenance request, we aim to respond within 3 business days.',
     includes: [],
     sections: [],
     show: [],
