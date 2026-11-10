@@ -3,7 +3,7 @@ import { pages } from '../data/pages'
 import { pathFor } from '../data/seo'
 import Reveal from './Reveal'
 
-const featured = ['website-development', 'business-website-design', 'restaurant-website-design', 'clinic-website-design', 'real-estate-website-design']
+const featured = ['website-development', 'business-website-design', 'restaurant-website-design', 'clinic-website-design', 'real-estate-website-design', 'website-development-tamil-nadu']
 
 export default function ServiceLinks() {
   const items = featured.map((s) => pages.find((p) => p.slug === s))

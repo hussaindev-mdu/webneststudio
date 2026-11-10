@@ -12,7 +12,7 @@ export const brand = {
   whatsappDisplay: '+91 95668 31055',
   email: 'hussaindev07@gmail.com',
   instagram: 'https://www.instagram.com/webneststudio_live/',
-  facebook: 'https://www.facebook.com/share/1CRcon6XwM/',
+  facebook: 'https://www.facebook.com/people/Webneststudio/61596043514901/',
 }
 
 // Formspree: create a form at https://formspree.io and paste its ID (the part after /f/)

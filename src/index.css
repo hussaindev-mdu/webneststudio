@@ -18,6 +18,9 @@
   html { scroll-behavior: smooth; scroll-padding-top: 80px; }
   body { @apply bg-surface font-body text-ink antialiased; }
   h1, h2, h3, h4 { @apply font-heading text-head; }
+  /* Tamil text: keep Inter / Plus Jakarta Sans for Latin glyphs, fall back to a Tamil font; Tamil needs looser spacing */
+  [lang="ta"] { font-family: Inter, "Noto Sans Tamil", "Tamil Sangam MN", "Nirmala UI", system-ui, sans-serif; line-height: 1.75; }
+  [lang="ta"] :is(h1, h2, h3, h4) { font-family: "Plus Jakarta Sans", "Noto Sans Tamil", "Tamil Sangam MN", "Nirmala UI", system-ui, sans-serif; line-height: 1.5; letter-spacing: normal; }
   :focus-visible { @apply outline outline-2 outline-offset-2 outline-accent-600; }
   @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 }

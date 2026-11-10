@@ -19,7 +19,7 @@ export const homeMeta = {
     'Websites for restaurants, clinics, real estate and small businesses across India from ₹5,999. Delivered in 6 working days after advance payment and content.',
 }
 
-export const metaFor = (page) => ({ path: pathFor(page.slug), title: page.title, description: page.description })
+export const metaFor = (page) => ({ path: pathFor(page.slug), title: page.title, description: page.description, ...(page.localeAlternate ? { localeAlternate: page.localeAlternate } : {}) })
 
 // every indexable page, used for prerendering and the sitemap
 export const routes = [homeMeta, ...pages.map(metaFor), metaFor(privacy), metaFor(terms)]
@@ -55,14 +55,20 @@ export const homeSchema = [
   },
 ]
 
+// Service area for the Tamil Nadu page: a service area only, not a business location (no LocalBusiness / address).
+const tamilNaduArea = [
+  { '@type': 'State', name: 'Tamil Nadu' },
+  ...['Chennai', 'Madurai', 'Coimbatore', 'Tiruchirappalli', 'Salem'].map((name) => ({ '@type': 'City', name })),
+]
+
 export const serviceSchema = (page) => ({
   '@context': 'https://schema.org',
   '@type': 'Service',
   name: page.h1,
-  serviceType: page.nav,
+  serviceType: page.serviceType || page.nav,
   description: page.description,
   url: urlFor(page.slug),
-  areaServed: { '@type': 'Country', name: 'India' },
+  areaServed: page.slug === 'website-development-tamil-nadu' ? tamilNaduArea : { '@type': 'Country', name: 'India' },
   '@id': `${urlFor(page.slug)}#service`,
   provider: { '@type': 'Organization', '@id': ORG_ID, name: brand.name, url: SITE.url + '/' },
 })

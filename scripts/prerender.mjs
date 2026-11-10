@@ -24,6 +24,7 @@ for (const r of routes) {
   html = must(html, /<meta property="og:description"[^>]*>/, `<meta property="og:description" content="${esc(r.description)}" />`)
   html = must(html, /<meta property="og:url"[^>]*>/, `<meta property="og:url" content="${url}" />`)
   html = must(html, /<link rel="canonical"[^>]*>/, `<link rel="canonical" href="${url}" />`)
+  if (r.localeAlternate) html = must(html, /<meta property="og:locale"[^>]*>/, `<meta property="og:locale" content="en_IN" />\n    <meta property="og:locale:alternate" content="${r.localeAlternate}" />`)
   const file = r.path === '/' ? 'index.html' : path.join(r.path.slice(1), 'index.html')
   fs.mkdirSync(path.dirname(path.join(dist, file)), { recursive: true })
   fs.writeFileSync(path.join(dist, file), html)

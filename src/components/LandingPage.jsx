@@ -93,7 +93,7 @@ export default function LandingPage({ page }) {
         <section className="section bg-alt" aria-labelledby="related-title">
           <div className="container-x">
             <h2 id="related-title" className="section-title">{page.slug === 'contact' ? 'Explore more' : 'Related services'}</h2>
-            <ul className={`mt-6 grid gap-4 sm:grid-cols-2 ${related.length > 4 ? 'lg:grid-cols-5' : 'lg:grid-cols-4'}`}>
+            <ul className={`mt-6 grid gap-4 sm:grid-cols-2 ${related.length > 5 ? 'lg:grid-cols-3' : related.length > 4 ? 'lg:grid-cols-5' : 'lg:grid-cols-4'}`}>
               {related.map((p) => (
                 <li key={p.slug}>
                   <Link to={pathFor(p.slug)} className="block h-full rounded-2xl bg-card p-5 font-semibold text-head shadow-card hover:text-accent-600">{p.linkText || p.nav}</Link>

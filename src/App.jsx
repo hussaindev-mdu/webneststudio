@@ -14,6 +14,7 @@ import WhatsAppButton from './components/WhatsAppButton'
 import MouseCursor3D from './components/MouseCursor3D'
 import ServiceLinks from './components/ServiceLinks'
 import LandingPage from './components/LandingPage'
+import TamilNaduPage from './components/TamilNaduPage'
 import PrivacyPolicy from './components/PrivacyPolicy'
 import TermsPage from './components/TermsPage'
 import Seo from './components/Seo'
@@ -72,7 +73,7 @@ export default function App() {
     <Routes>
       <Route element={<Layout />}>
         <Route index element={<Home />} />
-        {pages.map((p) => <Route key={p.slug} path={p.slug} element={<LandingPage page={p} />} />)}
+        {pages.map((p) => <Route key={p.slug} path={p.slug} element={p.custom ? <TamilNaduPage page={p} /> : <LandingPage page={p} />} />)}
         <Route path="privacy-policy" element={<PrivacyPolicy />} />
         <Route path="terms-and-conditions" element={<TermsPage />} />
         <Route path="*" element={<NotFound />} />

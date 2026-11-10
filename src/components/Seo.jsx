@@ -19,6 +19,8 @@ export default function Seo({ meta: m, schema, noindex = false }) {
     setTag('meta[property="og:description"]', meta('property', 'og:description'), 'content', m.description)
     setTag('meta[property="og:url"]', meta('property', 'og:url'), 'content', url)
     setTag('link[rel="canonical"]', () => { const l = document.createElement('link'); l.rel = 'canonical'; return l }, 'href', url)
+    if (m.localeAlternate) setTag('meta[property="og:locale:alternate"]', meta('property', 'og:locale:alternate'), 'content', m.localeAlternate)
+    else document.head.querySelector('meta[property="og:locale:alternate"]')?.remove()
     const robots = document.head.querySelector('meta[name="robots"]')
     if (noindex) setTag('meta[name="robots"]', meta('name', 'robots'), 'content', 'noindex')
     else if (robots) robots.remove()

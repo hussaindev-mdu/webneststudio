@@ -43,7 +43,7 @@ export const pages = [
       { q: 'Will my website show up on Google?', a: 'We build every site with a search-friendly structure, but ranking depends on competition and time. We do not promise a specific position.' },
       { q: 'Can you update my website later?', a: 'Yes. Every website includes 12 months of free maintenance from the website launch date. After that, you can continue with the maintenance plan.' },
     ],
-    related: ['business-website-design', 'restaurant-website-design', 'clinic-website-design', 'real-estate-website-design', 'portfolio'],
+    related: ['business-website-design', 'restaurant-website-design', 'clinic-website-design', 'real-estate-website-design', 'website-development-tamil-nadu', 'portfolio'],
     show: [],
   },
   {
@@ -87,7 +87,7 @@ export const pages = [
       { q: 'Can I add online booking or payments?', a: 'Simple booking through WhatsApp is included. Anything more advanced, like a custom admin panel, is quoted separately.' },
       { q: 'Is a social media page enough for my business?', a: 'A social page helps, but you do not control it and it is hard to find on Google. A website you own is a stable home for your services, contact details and customer enquiries.' },
     ],
-    related: ['website-development', 'restaurant-website-design', 'clinic-website-design', 'real-estate-website-design', 'portfolio'],
+    related: ['website-development', 'restaurant-website-design', 'clinic-website-design', 'real-estate-website-design', 'website-development-tamil-nadu', 'portfolio'],
     show: [],
   },
   {
@@ -129,7 +129,7 @@ export const pages = [
       { q: 'Can I link my Zomato or Swiggy page?', a: 'Yes, we add links or buttons to any ordering platform you use.' },
       { q: 'Can I show daily specials or festival offers?', a: 'Yes. Offers and specials can be added as a banner or a short section, and we can update them for you during your 12 months of free maintenance.' },
     ],
-    related: ['business-website-design', 'website-development', 'clinic-website-design', 'portfolio'],
+    related: ['business-website-design', 'website-development', 'clinic-website-design', 'website-development-tamil-nadu', 'portfolio'],
     show: [],
   },
   {
@@ -173,7 +173,7 @@ export const pages = [
       { q: 'Can you add multiple doctors or branches?', a: 'Yes, within the 1 to 5 page limit, or we can quote a larger site.' },
       { q: 'What should a clinic website avoid saying?', a: 'Avoid guaranteed results, exaggerated claims and anything that identifies patients. Keep descriptions factual, and check the advertising rules that apply to your profession.' },
     ],
-    related: ['business-website-design', 'website-development', 'restaurant-website-design', 'portfolio'],
+    related: ['business-website-design', 'website-development', 'restaurant-website-design', 'website-development-tamil-nadu', 'portfolio'],
     show: [],
   },
   {
@@ -216,8 +216,23 @@ export const pages = [
       { q: 'Do you add my RERA number?', a: 'Yes, we add space for your registration details wherever you need them.' },
       { q: 'Can I add walkthrough videos or virtual tours?', a: 'Yes. We can embed a YouTube walkthrough or a tour link on a property page.' },
     ],
-    related: ['business-website-design', 'website-development', 'pricing', 'portfolio'],
+    related: ['business-website-design', 'website-development', 'website-development-tamil-nadu', 'pricing', 'portfolio'],
     show: [],
+  },
+  {
+    slug: 'website-development-tamil-nadu',
+    custom: true, // rendered by TamilNaduPage (bilingual), content in tamilNadu.js
+    localeAlternate: 'ta_IN',
+    nav: 'Website Development in Tamil Nadu',
+    linkText: 'Website development in Tamil Nadu (English + தமிழ்)',
+    serviceType: 'Website development',
+    title: 'Website Development in Tamil Nadu | WebNestStudio',
+    description: 'Affordable website development for businesses in Tamil Nadu from ₹5,999. Online service for Chennai, Madurai, Coimbatore, Trichy and Salem. English and தமிழ்.',
+    h1: 'Affordable Website Development for Businesses in Tamil Nadu',
+    includes: [],
+    sections: [],
+    show: [],
+    related: ['website-development', 'pricing', 'portfolio'],
   },
   {
     slug: 'pricing',
