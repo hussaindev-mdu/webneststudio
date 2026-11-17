@@ -1,9 +1,12 @@
 import { useCallback, useEffect, useRef, useState } from 'react'
+import { DESKTOP_3D_QUERY } from '../hooks'
 
 // 3D laptop (public/models/webnest-laptop.glb), loaded lazily with three.js.
-// Click (or tap) the laptop to close/open the lid. A button does the same on phones.
-// The 3D mouse cursor (MouseCursor3D) is told when the pointer is over the laptop.
-// The static SVG shows first and stays if WebGL is unavailable.
+// Click the laptop to close/open the lid. The 3D mouse cursor (MouseCursor3D) is told when the pointer is over it.
+// DESKTOP ONLY: phones and tablets (narrow screens or touch-only pointers) never download three.js or the 3D model;
+// they keep the optimized static image (public/images/hero-laptop-*.webp, a still of the same 3D laptop).
+// The static image also shows first on desktop and stays if WebGL is unavailable.
+
 export default function Hero3D() {
   const mount = useRef(null)
   const toggleRef = useRef(() => {})
@@ -20,8 +23,9 @@ export default function Hero3D() {
   useEffect(() => {
     let disposed = false
     let cleanup = () => {}
+    let started = false
 
-    ;(async () => {
+    const boot = async () => {
       try {
         const THREE = await import('three')
         const { GLTFLoader } = await import('three/examples/jsm/loaders/GLTFLoader.js')
@@ -178,22 +182,40 @@ export default function Hero3D() {
       } catch {
         /* WebGL or loading failed: keep the static image */
       }
-    })()
+    }
 
-    return () => { disposed = true; cleanup() }
+    // start the 3D scene only on desktop-class devices (and if a window is later resized/rotated into that range)
+    const mq = window.matchMedia(DESKTOP_3D_QUERY)
+    const start = () => {
+      if (started || disposed || !mq.matches) return
+      started = true
+      boot()
+    }
+    start()
+    mq.addEventListener('change', start)
+
+    return () => { disposed = true; mq.removeEventListener('change', start); cleanup() }
   }, [])
 
   return (
     <div className="mx-auto w-full max-w-sm sm:max-w-xl">
       <div className="relative aspect-[16/11] w-full sm:aspect-[4/3]">
         {!ready && (
-          <img
-            src="/images/hero-devices.svg"
-            alt="Website displayed on a laptop and a phone"
-            width="640" height="480"
-            className="absolute inset-0 m-auto w-full"
-            fetchPriority="high"
-          />
+          <picture>
+            <source
+              type="image/webp"
+              srcSet="/images/hero-laptop-480.webp 480w, /images/hero-laptop-768.webp 768w"
+              sizes="(min-width: 640px) 576px, 384px"
+            />
+            <img
+              src="/images/hero-devices.svg"
+              alt="Website displayed on a laptop and a phone"
+              width="768" height="575"
+              className="absolute inset-0 m-auto h-auto w-full"
+              fetchPriority="high"
+              decoding="async"
+            />
+          </picture>
         )}
         <div ref={mount} data-cursor3d className="absolute inset-0" role="img" aria-label="3D laptop showing our website demo" />
       </div>

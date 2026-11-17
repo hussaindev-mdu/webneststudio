@@ -1,15 +1,16 @@
 import { useEffect } from 'react'
+import { DESKTOP_3D_QUERY } from '../hooks'
 
 // A small 3D computer mouse (public/models/webnest-mouse.glb) that replaces the pointer
 // over the 3D laptop in the hero only (the element marked data-cursor3d). It presses down
-// when you click, grows while over the laptop, and is skipped on touch screens.
+// when you click, grows while over the laptop, and is skipped on touch screens and narrow windows.
 const ZONE = '[data-cursor3d]'
 const INTERACTIVE = 'a, button, [role="button"], input, textarea, select, summary'
 const SIZE = 90 // canvas size in CSS px (small cursor)
 
 export default function MouseCursor3D() {
   useEffect(() => {
-    if (!window.matchMedia('(hover: hover) and (pointer: fine)').matches) return
+    if (!window.matchMedia(DESKTOP_3D_QUERY).matches) return // same desktop-only rule as the 3D laptop
     let disposed = false
     let cleanup = () => {}
 

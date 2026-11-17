@@ -39,7 +39,7 @@ export default function LandingPage({ page }) {
           <p className="mt-5 max-w-3xl text-lg text-muted">{page.intro}</p>
           <div className="mt-6 flex flex-col gap-3 sm:flex-row">
             {page.slug !== 'contact' && <Link to="/contact/" className="btn-primary">Get a Free Quote</Link>}
-            <a href={whatsappLink(`Hi SemmAi, I'm interested in ${page.nav.toLowerCase()}.`)} target="_blank" rel="noopener noreferrer" className="btn-whatsapp">
+            <a href={whatsappLink(`Hi SemmAI, I'm interested in ${page.nav.toLowerCase()}.`)} target="_blank" rel="noopener noreferrer" className="btn-whatsapp">
               <WhatsAppIcon /> Chat on WhatsApp
             </a>
           </div>

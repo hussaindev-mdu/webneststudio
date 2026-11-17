@@ -1,7 +1,7 @@
 import { Link, useLocation } from 'react-router-dom'
 import { brand } from '../data/content'
 
-// SemmAi logo: "SAi" inside a laptop, with a gold spark as the dot of the i.
+// SemmAI logo: "SAi" inside a laptop, with a gold spark as the dot of the i.
 // Master files (SVG/PNG, light + dark): logo/semmai/. Geometry is in an 848 x 489 box.
 const LIGHT = { ink: '#101C3D', ai: '#2563EB', spark: '#F59E0B' }
 const DARK = { ink: '#FFFFFF', ai: '#6B8EF5', spark: '#FBBF24' }
@@ -38,7 +38,7 @@ export function LogoMark({ className = 'h-10 w-auto', onDark = false, gap }) {
   )
 }
 
-// The written name "SemmAi" as a vector wordmark (Outfit ExtraBold outlines; the spark is the dot of the i).
+// The written name "SemmAI" as a vector wordmark (Outfit ExtraBold outlines; the spark is the dot of the i).
 // Size it with a height class, e.g. className="h-7". Master files: logo/semmai/semmai-wordmark*.svg
 const WM_LIGHT = { ink: '#101C3D', ai: '#2563EB', spark: '#F59E0B' }
 const WM_DARK = { ink: '#FFFFFF', ai: '#6B8EF5', spark: '#FBBF24' }

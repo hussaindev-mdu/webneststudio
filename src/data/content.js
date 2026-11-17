@@ -3,7 +3,7 @@
 // ============================================================================
 
 export const brand = {
-  name: 'SemmAi',
+  name: 'SemmAI',
   tagline: 'Intelligence with Excellence.',
   owner: 'Hussain',
   city: 'Your City', // REPLACE
@@ -19,7 +19,7 @@ export const brand = {
 export const formspreeId = 'mvkknwbz'
 
 export const defaultWhatsAppMessage =
-  "Hi SemmAi, I'm interested in a website for my business"
+  "Hi SemmAI, I'm interested in a website for my business"
 
 export const nav = [
   { label: 'Websites', href: '#services', menu: true },
@@ -36,7 +36,7 @@ export const hero = {
   // the broader company message sits above the H1; the H1 keeps the website-development focus for SEO
   kicker: 'Building intelligent digital experiences',
   subtext:
-    'SemmAi builds fast, mobile-friendly websites that help customers find you on Google, trust your business and contact you in one tap. AI assistants and automation are coming soon.',
+    'SemmAI builds fast, mobile-friendly websites that help customers find you on Google, trust your business and contact you in one tap. AI assistants and automation are coming soon.',
   eyebrow: 'Websites starting from ₹5,999',
   primaryCta: 'Get a Free Quote',
   proposalLine: 'Tell us about your business. Get a website proposal on WhatsApp.',
@@ -98,7 +98,7 @@ export const pricing = {
   title: 'Simple, honest pricing',
   subtitle: 'One-time website development fee. No surprise costs.',
   cta: 'Get Started',
-  offer: 'SemmAi Launching Offer',
+  offer: 'SemmAI Launching Offer',
   finePrint: '* One-time website development fee. Domain, hosting and renewal charges are separate where applicable. Delivery: 6 working days after receiving the advance payment and all required customer content and materials.',
   packages: [
     {
@@ -159,11 +159,11 @@ export const testimonials = {
 }
 
 export const about = {
-  title: 'About SemmAi: Who Builds Your Website',
+  title: 'About SemmAI: Who Builds Your Website',
   photo: '', // REPLACE – e.g. '/images/me.jpg' (put the file in public/images). Empty shows the logo.
   bio: [
-    "I'm Hussain, Founder of SemmAi. With 7 years of website development experience, I personally work on creating modern, responsive websites for businesses. My work uses React, JavaScript and Node.js.",
-    'SemmAi is an independently run technology company serving businesses online across India. Today we build websites; WhatsApp AI assistants, AI customer support, business automation and custom software are coming soon. You communicate directly with the person building your solution.',
+    "I'm Hussain, Founder of SemmAI. With 7 years of website development experience, I personally work on creating modern, responsive websites for businesses. My work uses React, JavaScript and Node.js.",
+    'SemmAI is an independently run technology company serving businesses online across India. Today we build websites; WhatsApp AI assistants, AI customer support, business automation and custom software are coming soon. You communicate directly with the person building your solution.',
   ],
   reasons: [
     { icon: 'tag', title: 'Fixed packages', text: 'Website packages from ₹5,999, with a fixed one-time development fee.' },

@@ -1,4 +1,4 @@
-# SemmAi – Website
+# SemmAI – Website
 
 React (Vite) + Tailwind CSS single-page site. Fast, mobile-first, no heavy UI libraries.
 

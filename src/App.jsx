@@ -53,7 +53,7 @@ function Home() {
       <Process />
       <About />
       <FAQ />
-      <Contact moreHref="/contact/" moreLabel="More ways to contact SemmAi" />
+      <Contact moreHref="/contact/" moreLabel="More ways to contact SemmAI" />
     </>
   )
 }
@@ -61,7 +61,7 @@ function Home() {
 function NotFound() {
   return (
     <section className="section pt-32 text-center">
-      <Seo meta={{ path: '/404/', title: 'Page not found | SemmAi', description: 'This page could not be found.' }} noindex />
+      <Seo meta={{ path: '/404/', title: 'Page not found | SemmAI', description: 'This page could not be found.' }} noindex />
       <h1 className="text-4xl font-extrabold">Page not found</h1>
       <Link to="/" className="btn-primary mt-6">Back to home</Link>
     </section>

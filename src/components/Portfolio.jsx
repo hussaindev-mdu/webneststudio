@@ -3,6 +3,15 @@ import { Link } from 'react-router-dom'
 import { portfolio } from '../data/content'
 import Reveal from './Reveal'
 
+// WebP versions live next to each JPG (public/images/<name>-400.webp, -640, -960). The JPG stays as the fallback.
+const WEBP_WIDTHS = [400, 640, 960]
+const webpSrcSet = (src) => {
+  const base = src.replace(/\.(jpe?g|png)$/i, '')
+  return WEBP_WIDTHS.map((w) => `${base}-${w}.webp ${w}w`).join(', ')
+}
+// card width: full width on phones, 2 columns from 640px, 3 columns (max ~346px) from 1024px
+const CARD_SIZES = '(min-width: 1024px) 346px, (min-width: 640px) 46vw, calc(100vw - 40px)'
+
 // `preview` is the shorter home-page version: own heading and no repeated descriptions
 export default function Portfolio({ moreHref, moreLabel, title = portfolio.title, subtitle = portfolio.subtitle, preview = false }) {
   return (
@@ -16,7 +25,10 @@ export default function Portfolio({ moreHref, moreLabel, title = portfolio.title
           {portfolio.projects.map((p, i) => (
             <Reveal key={p.name} delay={(i % 3) * 0.08}>
               <article className="flex h-full flex-col overflow-hidden rounded-2xl bg-card shadow-card">
-                <img src={p.image} alt={preview ? `${p.name} website preview` : p.alt || `${p.name} website preview`} width="800" height="560" loading="lazy" decoding="async" className="aspect-[10/7] w-full object-cover" />
+                <picture>
+                  <source type="image/webp" srcSet={webpSrcSet(p.image)} sizes={CARD_SIZES} />
+                  <img src={p.image} alt={preview ? `${p.name} website preview` : p.alt || `${p.name} website preview`} width="800" height="560" loading="lazy" decoding="async" className="aspect-[10/7] w-full object-cover" />
+                </picture>
                 <div className="flex flex-1 flex-col p-5">
                   <div className="flex flex-wrap items-center gap-2">
                     <span className="text-xs font-bold uppercase tracking-wider text-accent-700">{p.category}</span>

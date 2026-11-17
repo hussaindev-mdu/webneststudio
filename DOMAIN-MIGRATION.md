@@ -1,10 +1,10 @@
-# SemmAi domain migration checklist
+# SemmAI domain migration checklist
 
-The site is branded SemmAi and the code now uses **https://semmai.net** (switched in the code, not yet deployed). The old domain was **https://webneststudio.live**. The code-change section below is done; the redirect, Search Console and social-profile steps are still open.
+The site is branded SemmAI and the code now uses **https://semmai.net** (switched in the code, not yet deployed). The old domain was **https://webneststudio.live**. The code-change section below is done; the redirect, Search Console and social-profile steps are still open.
 
 ## Before you switch
 
-- [ ] Confirm "SemmAi" is clear to use: trademark search (India IP office and, if you plan to sell abroad, WIPO), company-name check (MCA), and social handles.
+- [ ] Confirm "SemmAI" is clear to use: trademark search (India IP office and, if you plan to sell abroad, WIPO), company-name check (MCA), and social handles.
 - [ ] Buy the domain and decide on one form (e.g. `https://example.com`, no `www`, or the reverse). Every step below uses that exact form.
 - [ ] Note current Google Search Console traffic for the 12 URLs, so you can compare after the move.
 

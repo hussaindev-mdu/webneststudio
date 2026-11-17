@@ -3,7 +3,7 @@ import { ArrowRight } from 'lucide-react'
 import { solutions, whatsappLink } from '../data/content'
 import Reveal from './Reveal'
 
-// Homepage overview of SemmAi services. Only Website Development is live; the rest are labelled Coming Soon.
+// Homepage overview of SemmAI services. Only Website Development is live; the rest are labelled Coming Soon.
 // Each card has an id so it can be linked as /#whatsapp-ai etc. (no separate pages until a service launches).
 export default function Solutions() {
   return (
@@ -22,7 +22,7 @@ export default function Solutions() {
               <h3 className={`mt-3 text-lg font-bold ${s.soon ? '' : '!text-white'}`}>{s.title}</h3>
               <p className={`mt-2 flex-1 ${s.soon ? 'text-muted' : 'text-brand-100'}`}>{s.text}</p>
               {s.soon ? (
-                <a href={whatsappLink(`Hi SemmAi, I would like to know more about ${s.title} when it launches.`)} target="_blank" rel="noopener noreferrer" className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-link hover:text-accent-600">
+                <a href={whatsappLink(`Hi SemmAI, I would like to know more about ${s.title} when it launches.`)} target="_blank" rel="noopener noreferrer" className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-link hover:text-accent-600">
                   {s.cta} <ArrowRight size={16} aria-hidden />
                 </a>
               ) : (
