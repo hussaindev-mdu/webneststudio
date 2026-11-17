@@ -15,7 +15,7 @@ export default function Solutions() {
         </Reveal>
         <ul className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {solutions.items.map((s) => (
-            <li key={s.title} id={s.id} className={`flex scroll-mt-24 flex-col rounded-2xl p-6 ${s.soon ? 'border border-dashed border-line bg-cream' : 'bg-brand-900 text-white shadow-card dark:bg-brand-800 sm:col-span-2'}`}>
+            <li key={s.title} id={s.id} className={`flex scroll-mt-24 flex-col rounded-2xl p-6 ${s.soon ? 'border border-dashed border-line bg-cream' : 'bg-brand-900 text-white shadow-card dark:bg-[#1B2437] sm:col-span-2'}`}>
               <p className={`self-start rounded-full px-2.5 py-0.5 text-xs font-bold uppercase tracking-wide ${s.soon ? 'border border-line text-muted' : 'bg-accent-600 text-white'}`}>
                 {s.soon ? solutions.soon : solutions.live}
               </p>
@@ -26,7 +26,7 @@ export default function Solutions() {
                   {s.cta} <ArrowRight size={16} aria-hidden />
                 </a>
               ) : (
-                <Link to={s.href} className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-orange-300 hover:text-white">
+                <Link to={s.href} className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-gold-400 hover:text-white">
                   {s.cta} <ArrowRight size={16} aria-hidden />
                 </Link>
               )}

@@ -6,20 +6,29 @@ export default {
     extend: {
       colors: {
         brand: {
-          50: '#EEF5FB',
-          100: '#D9E8F5',
-          500: '#1F6FB2',
-          600: '#175A92',
-          700: '#124A78',
-          800: '#0F3A5E',
-          900: '#0A2742', // deep navy – main brand colour
+          50: '#EEF3FF',
+          100: '#DCE6FD',
+          500: '#2563EB', // logo blue
+          600: '#1D4ED8',
+          700: '#1E3A8A',
+          800: '#16285C',
+          900: '#101C3D', // logo navy – main brand colour
         },
+        // accent = logo blue, used for buttons, links and icons (white text on 600 = AA contrast)
         accent: {
-          50: '#FFF3EB',
-          100: '#FFE0CC',
-          500: '#EA580C',
-          600: '#C2410C', // white text on this = AA contrast (5.2:1)
-          700: '#9A3412',
+          50: '#EFF4FF',
+          100: '#DBE6FE',
+          200: '#BFD3FD',
+          300: '#93B4FB',
+          500: '#3B82F6',
+          600: '#2563EB', // logo blue, white text on this = 5.2:1
+          700: '#1D4ED8',
+        },
+        // gold = the logo's spark: badges and highlights. Use navy text on gold-400/100, never white.
+        gold: {
+          100: '#FEF3C7',
+          400: '#FBBF24',
+          500: '#F59E0B', // logo gold
         },
         // Theme-aware colours: values come from CSS variables in src/index.css (light + .dark)
         surface: 'rgb(var(--c-surface) / <alpha-value>)',

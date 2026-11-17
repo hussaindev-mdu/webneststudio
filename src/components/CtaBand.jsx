@@ -6,7 +6,7 @@ import { WhatsAppIcon } from './Icons'
 export default function CtaBand({ showPricing = true }) {
   const [basic, starter] = pricing.packages
   return (
-    <section className="section bg-brand-900">
+    <section className="section bg-brand-900 dark:bg-[#0A0D14]">
       <div className="container-x max-w-3xl text-center">
         <h2 className="section-title !text-white">Ready for your website?</h2>
         <p className="mt-3 text-lg text-brand-100">

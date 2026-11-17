@@ -11,7 +11,7 @@ export default function Hero() {
       <div className="container-x grid items-center gap-10 lg:grid-cols-2">
         <Reveal>
           <div className="mb-4 flex flex-wrap items-center gap-1.5 sm:gap-2">
-            <p className="rounded-full bg-accent-50 px-2.5 py-1 text-xs font-semibold sm:px-3 sm:text-sm text-accent-700 dark:bg-accent-500/15 dark:text-orange-300">{hero.eyebrow || brand.tagline}</p>
+            <p className="rounded-full bg-gold-100 px-2.5 py-1 text-xs font-semibold sm:px-3 sm:text-sm text-brand-900 dark:bg-gold-400/15 dark:text-gold-400">{hero.eyebrow || brand.tagline}</p>
             {hero.label && <p className="rounded-full bg-accent-600 px-2.5 py-1 text-xs font-bold text-white sm:px-3 sm:text-sm">{hero.label}</p>}
           </div>
           {hero.kicker && <p className="mb-3 font-heading text-sm font-bold uppercase tracking-wider text-brand-600 dark:text-brand-100 sm:text-base">{hero.kicker}</p>}

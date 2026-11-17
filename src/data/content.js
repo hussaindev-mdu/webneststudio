@@ -22,7 +22,6 @@ export const defaultWhatsAppMessage =
   "Hi SemmAi, I'm interested in a website for my business"
 
 export const nav = [
-  { label: 'Solutions', href: '#solutions' },
   { label: 'Websites', href: '#services', menu: true },
   { label: 'Portfolio', href: '/portfolio/' },
   { label: 'Pricing', href: '/pricing/' },

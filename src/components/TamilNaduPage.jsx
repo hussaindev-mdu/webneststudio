@@ -126,14 +126,14 @@ function Block({ c, tone }) {
           </Reveal>
           <div className="mx-auto mt-12 grid max-w-4xl gap-6 md:grid-cols-2">
             {c.pricing.packages.map((pkg) => (
-              <div key={pkg.name} lang="en" className={`relative flex h-full flex-col rounded-2xl p-6 sm:p-8 ${pkg.popular ? 'bg-brand-900 text-white shadow-card ring-4 ring-accent-500/40 dark:bg-brand-800' : 'border border-line bg-cream'}`}>
-                {pkg.popular && <span lang={c.lang} className="absolute -top-3 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full bg-accent-600 px-4 py-1 text-xs font-bold uppercase tracking-wide text-white">{c.pricing.popular}</span>}
+              <div key={pkg.name} lang="en" className={`relative flex h-full flex-col rounded-2xl p-6 sm:p-8 ${pkg.popular ? 'bg-brand-900 text-white shadow-card ring-4 ring-gold-400/50 dark:bg-[#1B2437]' : 'border border-line bg-cream'}`}>
+                {pkg.popular && <span lang={c.lang} className="absolute -top-3 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full bg-gold-400 px-4 py-1 text-xs font-bold uppercase tracking-wide text-brand-900">{c.pricing.popular}</span>}
                 <h3 className={`text-xl font-bold ${pkg.popular ? '!text-white' : ''}`}>{pkg.name}</h3>
                 <p lang={c.lang} className={`mt-1 text-sm ${pkg.popular ? 'text-brand-100' : 'text-muted'}`}>{pkg.text}</p>
                 <p className={`mt-4 font-heading text-4xl font-extrabold ${pkg.popular ? 'text-white' : 'text-head'}`}>{pkg.price}</p>
                 <ul lang={c.lang} className="mt-6 flex-1 space-y-3">
                   {pkg.features.map((f) => (
-                    <li key={f} className="flex items-start gap-2"><Check size={18} className={`mt-0.5 shrink-0 ${pkg.popular ? 'text-orange-300' : 'text-accent-600'}`} aria-hidden /><span>{f}</span></li>
+                    <li key={f} className="flex items-start gap-2"><Check size={18} className={`mt-0.5 shrink-0 ${pkg.popular ? 'text-gold-400' : 'text-accent-600'}`} aria-hidden /><span>{f}</span></li>
                   ))}
                 </ul>
                 <a href={whatsappLink(`Hi SemmAi, I'm interested in the ${pkg.name} package (${pkg.price}). Can we talk?`)} target="_blank" rel="noopener noreferrer" className={`mt-8 ${pkg.popular ? 'btn-primary' : 'btn-outline'}`}>
@@ -196,7 +196,7 @@ function Block({ c, tone }) {
 
       <FAQ items={c.faq.items} title={c.faq.heading} id={`faq-${c.id}`} />
 
-      <section className="section bg-brand-900">
+      <section className="section bg-brand-900 dark:bg-[#0A0D14]">
         <div className="container-x max-w-3xl text-center">
           <h2 className="section-title !text-white">{c.cta.heading}</h2>
           <p className="mt-3 text-lg text-brand-100">{c.cta.text}</p>

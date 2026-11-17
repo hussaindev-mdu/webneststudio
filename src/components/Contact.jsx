@@ -32,7 +32,7 @@ export default function Contact({ moreHref, moreLabel }) {
   }
 
   return (
-    <section id="contact" className="section bg-brand-900">
+    <section id="contact" className="section bg-brand-900 dark:bg-[#0A0D14]">
       <div className="container-x grid gap-10 lg:grid-cols-2">
         <Reveal>
           <h2 className="section-title !text-white">{contact.title}</h2>
@@ -41,7 +41,7 @@ export default function Contact({ moreHref, moreLabel }) {
             <a href={whatsappLink()} target="_blank" rel="noopener noreferrer" className="btn-whatsapp"><WhatsAppIcon /> WhatsApp {brand.whatsappDisplay}</a>
             <a href={`mailto:${brand.email}`} className="btn border-2 border-white text-white hover:bg-white hover:text-brand-900"><Mail size={20} aria-hidden /> {brand.email}</a>
           </div>
-          {moreHref && <p className="mt-5"><Link to={moreHref} className="text-sm font-semibold text-orange-200 underline hover:text-white">{moreLabel}</Link></p>}
+          {moreHref && <p className="mt-5"><Link to={moreHref} className="text-sm font-semibold text-gold-400 underline hover:text-white">{moreLabel}</Link></p>}
         </Reveal>
         <Reveal delay={0.1}>
           <form onSubmit={handleSubmit} className="space-y-4 rounded-2xl bg-card p-6 shadow-card sm:p-8" noValidate={false}>

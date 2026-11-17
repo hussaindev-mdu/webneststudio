@@ -17,8 +17,8 @@ export default function About() {
           ) : (
             <div className="mx-auto flex aspect-square w-full max-w-sm flex-col items-center justify-center gap-4 rounded-3xl bg-tint" role="img" aria-label={`${brand.name} logo`}>
               <img src="/logo.png" alt="" width="512" height="512" loading="lazy" decoding="async" className="h-40 w-40 sm:h-48 sm:w-48" />
-              <Wordmark className="text-3xl" />
-              <span className="text-sm font-semibold text-accent-700 dark:text-orange-300">{brand.tagline}</span>
+              <Wordmark className="h-12" />
+              <span className="text-sm font-semibold text-accent-700 dark:text-accent-300">{brand.tagline}</span>
             </div>
           )}
         </Reveal>

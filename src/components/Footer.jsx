@@ -9,7 +9,7 @@ import { InstagramIcon, FacebookIcon } from './Icons'
 export default function Footer() {
   const a = useAnchor()
   return (
-    <footer className="bg-brand-900 text-brand-100">
+    <footer className="bg-brand-900 dark:bg-[#0A0D14] text-brand-100">
       <div className="container-x border-t border-white/10 py-10">
         <div className="flex flex-col items-start justify-between gap-6 md:flex-row md:items-center">
           <div>
