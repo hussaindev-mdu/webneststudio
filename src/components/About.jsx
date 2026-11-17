@@ -3,7 +3,7 @@ import { Zap, MessagesSquare, Tag, Eye, Wrench } from 'lucide-react'
 import { about, brand, whatsappLink } from '../data/content'
 import { WhatsAppIcon } from './Icons'
 import Reveal from './Reveal'
-import { LogoIcon } from './Logo'
+import { Wordmark } from './Logo'
 
 const icons = { zap: Zap, message: MessagesSquare, tag: Tag, eye: Eye, wrench: Wrench }
 
@@ -16,11 +16,9 @@ export default function About() {
             <img src={about.photo} alt={brand.owner} loading="lazy" width="480" height="480" className="mx-auto aspect-square w-full max-w-sm rounded-3xl object-cover shadow-card" />
           ) : (
             <div className="mx-auto flex aspect-square w-full max-w-sm flex-col items-center justify-center gap-4 rounded-3xl bg-tint" role="img" aria-label={`${brand.name} logo`}>
-              <LogoIcon className="h-28 w-28" />
-              <span className="font-heading text-3xl font-extrabold tracking-tight text-head">
-                {brand.name.replace('Studio', '')}
-                <span className="text-accent-600">Studio</span>
-              </span>
+              <img src="/logo.png" alt="" width="512" height="512" loading="lazy" decoding="async" className="h-40 w-40 sm:h-48 sm:w-48" />
+              <Wordmark className="text-3xl" />
+              <span className="text-sm font-semibold text-accent-700 dark:text-orange-300">{brand.tagline}</span>
             </div>
           )}
         </Reveal>

@@ -136,7 +136,7 @@ function Block({ c, tone }) {
                     <li key={f} className="flex items-start gap-2"><Check size={18} className={`mt-0.5 shrink-0 ${pkg.popular ? 'text-orange-300' : 'text-accent-600'}`} aria-hidden /><span>{f}</span></li>
                   ))}
                 </ul>
-                <a href={whatsappLink(`Hi WebNestStudio, I'm interested in the ${pkg.name} package (${pkg.price}). Can we talk?`)} target="_blank" rel="noopener noreferrer" className={`mt-8 ${pkg.popular ? 'btn-primary' : 'btn-outline'}`}>
+                <a href={whatsappLink(`Hi SemmAi, I'm interested in the ${pkg.name} package (${pkg.price}). Can we talk?`)} target="_blank" rel="noopener noreferrer" className={`mt-8 ${pkg.popular ? 'btn-primary' : 'btn-outline'}`}>
                   <span lang={c.lang}>{c.pricing.cta}</span>
                 </a>
               </div>

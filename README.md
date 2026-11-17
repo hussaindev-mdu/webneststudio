@@ -1,4 +1,4 @@
-# WebNestStudio – Portfolio Website
+# SemmAi – Website
 
 React (Vite) + Tailwind CSS single-page site. Fast, mobile-first, no heavy UI libraries.
 

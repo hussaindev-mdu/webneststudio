@@ -4,9 +4,9 @@ import { privacy } from './privacy'
 import { terms } from './terms'
 
 export const SITE = {
-  url: 'https://webneststudio.live',
+  url: 'https://semmai.net',
   name: brand.name,
-  ogImage: 'https://webneststudio.live/og-image.png',
+  ogImage: 'https://semmai.net/og-image.png',
 }
 
 export const pathFor = (slug) => (slug ? `/${slug}/` : '/')
@@ -14,7 +14,7 @@ export const urlFor = (slug) => SITE.url + pathFor(slug)
 
 export const homeMeta = {
   path: '/',
-  title: 'Affordable Website Development in India | WebNestStudio',
+  title: 'Affordable Website Development in India | SemmAi',
   description:
     'Websites for restaurants, clinics, real estate and small businesses across India from ₹5,999. Delivered in 6 working days after advance payment and content.',
 }
@@ -37,6 +37,8 @@ const organization = {
   name: brand.name,
   url: SITE.url + '/',
   logo: `${SITE.url}/logo.png`,
+  slogan: brand.tagline,
+  description: 'SemmAi is an independently run technology company serving businesses online across India. It builds websites today, with WhatsApp AI assistants, AI customer support, business automation and custom software planned.',
   email: brand.email,
   contactPoint: [{ '@type': 'ContactPoint', contactType: 'customer support', telephone: '+' + brand.whatsappNumber, email: brand.email, areaServed: 'IN', availableLanguage: ['en'] }],
   ...(sameAs.length ? { sameAs } : {}),

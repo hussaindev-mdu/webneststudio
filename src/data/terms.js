@@ -4,8 +4,8 @@ import { brand } from './content'
 export const terms = {
   slug: 'terms-and-conditions',
   nav: 'Terms & Conditions',
-  title: 'Terms & Conditions | WebNestStudio',
-  description: 'Terms and conditions for WebNestStudio website development packages: payments, delivery, revisions, ownership, maintenance, cancellations and refunds.',
+  title: 'Terms & Conditions | SemmAi',
+  description: 'Terms and conditions for SemmAi website development packages: payments, delivery, revisions, ownership, maintenance, cancellations and refunds.',
   h1: 'Terms & Conditions',
   updated: '11 November 2026',
   updatedISO: '2026-11-11',
@@ -94,7 +94,7 @@ export const terms = {
       ],
     },
     {
-      heading: 'Cancellation or Delay by WebNestStudio',
+      heading: 'Cancellation or Delay by SemmAi',
       paras: [
         `If ${brand.name} cannot complete a project because of unforeseen circumstances, we will communicate with you, and we will discuss a revised delivery date or an appropriate refund.`,
         'If the project cannot proceed, any refund will fairly account for the payments received and the work already completed.',

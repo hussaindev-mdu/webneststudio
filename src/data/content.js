@@ -3,8 +3,8 @@
 // ============================================================================
 
 export const brand = {
-  name: 'WebNestStudio',
-  tagline: 'Websites that bring you customers',
+  name: 'SemmAi',
+  tagline: 'Intelligence with Excellence.',
   owner: 'Hussain',
   city: 'Your City', // REPLACE
   niche: 'businesses',
@@ -19,15 +19,14 @@ export const brand = {
 export const formspreeId = 'mvkknwbz'
 
 export const defaultWhatsAppMessage =
-  "Hi WebNestStudio, I'm interested in a website for my business"
+  "Hi SemmAi, I'm interested in a website for my business"
 
 export const nav = [
-  { label: 'Project Demo', href: '/portfolio/' },
-  { label: 'Services', href: '#services', menu: true },
+  { label: 'Solutions', href: '#solutions' },
+  { label: 'Websites', href: '#services', menu: true },
+  { label: 'Portfolio', href: '/portfolio/' },
   { label: 'Pricing', href: '/pricing/' },
-  { label: 'Process', href: '#process' },
   { label: 'About', href: '#about' },
-  { label: 'FAQ', href: '#faq' },
   { label: 'Contact Us', href: '/contact/' },
 ]
 
@@ -35,10 +34,11 @@ export const hero = {
   // {niche} and {city} are filled in automatically from `brand`
   headline: 'Affordable Website Development for Businesses Across India, Delivered in 6 Working Days',
   deliveryNote: 'Delivery: 6 working days after receiving the advance payment and all required customer content and materials.',
+  // the broader company message sits above the H1; the H1 keeps the website-development focus for SEO
+  kicker: 'Building intelligent digital experiences',
   subtext:
-    'We design fast, mobile-friendly websites that help local customers find you on Google, trust your business and contact you in one tap.',
+    'SemmAi builds fast, mobile-friendly websites that help customers find you on Google, trust your business and contact you in one tap. AI assistants and automation are coming soon.',
   eyebrow: 'Websites starting from ₹5,999',
-  label: 'Affordable Website Development',
   primaryCta: 'Get a Free Quote',
   proposalLine: 'Tell us about your business. Get a website proposal on WhatsApp.',
   secondaryCta: 'Chat on WhatsApp',
@@ -79,11 +79,27 @@ export const portfolio = {
   ],
 }
 
+// Homepage "Solutions" section. Only Website Development is live; the others are not launched yet,
+// so they are labelled Coming Soon and make no capability or price claims.
+export const solutions = {
+  title: 'Solutions',
+  subtitle: 'Websites are available today. Our AI, automation and software services are in development.',
+  live: 'Available now',
+  soon: 'Coming soon',
+  items: [
+    { id: 'website-development', title: 'Website Development', text: 'Fast, mobile-friendly websites for restaurants, clinics, real estate and small businesses across India, with fixed packages from ₹5,999 and 6-working-day delivery.', href: '/website-development/', cta: 'Explore website development' },
+    { id: 'whatsapp-ai', title: 'WhatsApp AI Assistants', text: 'An assistant on WhatsApp to help answer common customer questions. We are still building this service.', soon: true, cta: 'Ask to be notified' },
+    { id: 'ai-support', title: 'AI Customer Support', text: 'Help for answering routine customer enquiries on your website and chat channels. Not available yet.', soon: true, cta: 'Ask to be notified' },
+    { id: 'automation', title: 'Business Automation', text: 'Automating repetitive tasks and connecting the tools your business already uses. Not available yet.', soon: true, cta: 'Ask to be notified' },
+    { id: 'software', title: 'Custom Software & SaaS', text: 'Software and web applications built around how your business works. We will share details when this service launches.', soon: true, cta: 'Ask to be notified' },
+  ],
+}
+
 export const pricing = {
   title: 'Simple, honest pricing',
   subtitle: 'One-time website development fee. No surprise costs.',
   cta: 'Get Started',
-  offer: 'WebNestStudio Launching Offer',
+  offer: 'SemmAi Launching Offer',
   finePrint: '* One-time website development fee. Domain, hosting and renewal charges are separate where applicable. Delivery: 6 working days after receiving the advance payment and all required customer content and materials.',
   packages: [
     {
@@ -144,11 +160,11 @@ export const testimonials = {
 }
 
 export const about = {
-  title: 'About WebNestStudio: Who Builds Your Website',
+  title: 'About SemmAi: Who Builds Your Website',
   photo: '', // REPLACE – e.g. '/images/me.jpg' (put the file in public/images). Empty shows the logo.
   bio: [
-    "I'm Hussain, Founder of WebNestStudio. With 7 years of website development experience, I personally work on creating modern, responsive websites for businesses. My work uses React, JavaScript and Node.js.",
-    'WebNestStudio is an independently run web development studio serving businesses online across India. You communicate directly with the person building your website.',
+    "I'm Hussain, Founder of SemmAi. With 7 years of website development experience, I personally work on creating modern, responsive websites for businesses. My work uses React, JavaScript and Node.js.",
+    'SemmAi is an independently run technology company serving businesses online across India. Today we build websites; WhatsApp AI assistants, AI customer support, business automation and custom software are coming soon. You communicate directly with the person building your solution.',
   ],
   reasons: [
     { icon: 'tag', title: 'Fixed packages', text: 'Website packages from ₹5,999, with a fixed one-time development fee.' },

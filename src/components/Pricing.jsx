@@ -44,7 +44,7 @@ export default function Pricing({ moreHref, moreLabel, title = pricing.title, su
                   ))}
                 </ul>
                 <a
-                  href={whatsappLink(`Hi WebNestStudio, I'm interested in the ${pkg.name} package (${pkg.price}${pkg.period.startsWith('per month') ? '/month' : ''}). Can we talk?`)}
+                  href={whatsappLink(`Hi SemmAi, I'm interested in the ${pkg.name} package (${pkg.price}${pkg.period.startsWith('per month') ? '/month' : ''}). Can we talk?`)}
                   target="_blank" rel="noopener noreferrer"
                   className={`mt-8 ${pkg.popular ? 'btn-primary' : 'btn-outline'}`}
                 >

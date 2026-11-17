@@ -5,10 +5,10 @@ export const pages = [
   {
     slug: 'website-development',
     nav: 'Website Development',
-    title: 'Website Development Company in India | WebNestStudio',
+    title: 'Website Development Company in India | SemmAi',
     description: 'Website development from ₹5,999, delivered in 6 working days after advance payment and content. 12 months of free maintenance from the website launch date.',
     h1: 'Affordable website development for Indian businesses',
-    intro: 'WebNestStudio is a small website development company in India that builds fast, clean, mobile-friendly websites for local businesses. You get a fixed price, 6-working-day delivery and a direct line to the person building your site.',
+    intro: 'SemmAi builds fast, clean, mobile-friendly websites for local businesses in India. You get a fixed price, 6-working-day delivery and a direct line to the person building your site.',
     includes: [
       { title: 'Mobile-first design', text: 'Most of your visitors are on phones, so every page is designed for a small screen first and then scaled up.' },
       { title: 'Search-friendly structure', text: 'Clean headings, page titles, descriptions, fast loading and a sitemap give Google a clear picture of your business.' },
@@ -49,7 +49,7 @@ export const pages = [
   {
     slug: 'business-website-design',
     nav: 'Business Website Design',
-    title: 'Small Business Website Design in India | WebNestStudio',
+    title: 'Small Business Website Design in India | SemmAi',
     description: 'Professional small business website design from ₹5,999. Mobile-friendly, quick to load and built to turn visitors into calls and WhatsApp enquiries.',
     h1: 'Small business website design that brings in enquiries',
     intro: 'A good business website does one job well: it helps a stranger understand what you offer, trust you and contact you. We design small business websites around exactly that.',
@@ -93,7 +93,7 @@ export const pages = [
   {
     slug: 'restaurant-website-design',
     nav: 'Restaurant Website Design',
-    title: 'Restaurant Website Design in India | WebNestStudio',
+    title: 'Restaurant Website Design in India | SemmAi',
     description: 'Restaurant website design with menu, gallery and WhatsApp booking from ₹5,999. Delivered in 6 working days after advance payment and content.',
     h1: 'Restaurant website design with menu, gallery and easy booking',
     intro: 'Hungry customers decide in seconds. We design restaurant websites that show your food, your menu and your location straight away, and make booking a table a single tap.',
@@ -135,7 +135,7 @@ export const pages = [
   {
     slug: 'clinic-website-design',
     nav: 'Clinic Website Design',
-    title: 'Clinic & Doctor Website Design in India | WebNestStudio',
+    title: 'Clinic & Doctor Website Design in India | SemmAi',
     description: 'Clinic website design with services, doctor profile and appointment enquiries from ₹5,999. Delivered in 6 working days after advance payment and content.',
     h1: 'Clinic website design that patients can trust and use',
     intro: 'Patients look for a clinic online before they call. We build clean, calm and accurate clinic and doctor websites that show your services, your timings and how to book an appointment.',
@@ -179,7 +179,7 @@ export const pages = [
   {
     slug: 'real-estate-website-design',
     nav: 'Real Estate Website Design',
-    title: 'Real Estate Website Design in India | WebNestStudio',
+    title: 'Real Estate Website Design in India | SemmAi',
     description: 'Real estate website design with property pages, galleries and WhatsApp enquiries from ₹5,999. Delivered in 6 working days after advance payment and content.',
     h1: 'Real estate website design for agents and builders',
     intro: 'Buyers browse properties on their phones long before they call an agent. We design real estate websites that present each property clearly and turn interest into WhatsApp and phone enquiries.',
@@ -226,7 +226,7 @@ export const pages = [
     nav: 'Website Development in Tamil Nadu',
     linkText: 'Website development in Tamil Nadu (English + தமிழ்)',
     serviceType: 'Website development',
-    title: 'Website Development in Tamil Nadu | WebNestStudio',
+    title: 'Website Development in Tamil Nadu | SemmAi',
     description: 'Affordable website development for businesses in Tamil Nadu from ₹5,999. Online service for Chennai, Madurai, Coimbatore, Trichy and Salem. English and தமிழ்.',
     h1: 'Affordable Website Development for Businesses in Tamil Nadu',
     includes: [],
@@ -241,7 +241,7 @@ export const pages = [
     title: 'Website Development Cost in India | Packages from ₹5,999',
     description: 'Website development packages in India: Basic ₹5,999, Starter ₹9,999. 12 months of free maintenance from the website launch date. No hidden fees.',
     h1: 'Website development cost in India: simple, fixed packages',
-    intro: 'Website prices vary widely depending on who builds the site and what it includes. At WebNestStudio you pick a fixed package, so you know the cost before we start.',
+    intro: 'Website prices vary widely depending on who builds the site and what it includes. At SemmAi you pick a fixed package, so you know the cost before we start.',
     includes: [],
     sections: [
       {
@@ -270,10 +270,10 @@ export const pages = [
     slug: 'portfolio',
     nav: 'Portfolio',
     linkText: 'Website design portfolio',
-    title: 'Website Design Portfolio | WebNestStudio',
-    description: 'Browse live website demos by WebNestStudio: a clinic, a restaurant and a tailoring business. See the design quality you can expect.',
+    title: 'Website Design Portfolio | SemmAi',
+    description: 'Browse live website demos by SemmAi: a clinic, a restaurant and a tailoring business. See the design quality you can expect.',
     h1: 'Website design portfolio: live demos you can open',
-    intro: 'Explore sample websites and live demos built by WebNestStudio, covering a clinic, a restaurant and a tailoring business. Each project is labelled as a demo or a client project, and you can open every one on your phone or computer.',
+    intro: 'Explore sample websites and live demos built by SemmAi, covering a clinic, a restaurant and a tailoring business. Each project is labelled as a demo or a client project, and you can open every one on your phone or computer.',
     includes: [],
     sections: [
       {
@@ -291,11 +291,11 @@ export const pages = [
   {
     slug: 'contact',
     nav: 'Contact',
-    linkText: 'Contact WebNestStudio',
-    title: 'Contact a Website Developer | WebNestStudio',
-    description: 'Contact WebNestStudio for a free website quote. Message us on WhatsApp, email or the form and get a proposal within 24 hours.',
+    linkText: 'Contact SemmAi',
+    title: 'Contact a Website Developer | SemmAi',
+    description: 'Contact SemmAi for a free website quote. Message us on WhatsApp, email or the form and get a proposal within 24 hours.',
     h1: 'Contact a website developer: get your free quote',
-    intro: 'WebNestStudio is independently run by Hussain and serves businesses online across India. Tell us about your business and what you need. We reply to new enquiries within 24 hours, usually much sooner, with a clear proposal and price. If you are an existing customer with a maintenance request, we aim to respond within 3 business days.',
+    intro: 'SemmAi is independently run by Hussain and serves businesses online across India. Tell us about your business and what you need. We reply to new enquiries within 24 hours, usually much sooner, with a clear proposal and price. If you are an existing customer with a maintenance request, we aim to respond within 3 business days.',
     includes: [],
     sections: [],
     show: [],

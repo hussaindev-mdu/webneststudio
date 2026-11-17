@@ -13,6 +13,7 @@ import Footer from './components/Footer'
 import WhatsAppButton from './components/WhatsAppButton'
 import MouseCursor3D from './components/MouseCursor3D'
 import ServiceLinks from './components/ServiceLinks'
+import Solutions from './components/Solutions'
 import LandingPage from './components/LandingPage'
 import TamilNaduPage from './components/TamilNaduPage'
 import PrivacyPolicy from './components/PrivacyPolicy'
@@ -46,6 +47,7 @@ function Home() {
       {/* the 3D mouse cursor only applies to the home page's 3D laptop, so it mounts here only */}
       <MouseCursor3D />
       <Hero />
+      <Solutions />
       <Portfolio preview title="Featured projects" subtitle="A quick look at our work. See every project, with live demos, on the portfolio page." moreHref="/portfolio/" moreLabel="View all website design projects" />
       <Problems />
       <ServiceLinks />
@@ -53,7 +55,7 @@ function Home() {
       <Process />
       <About />
       <FAQ />
-      <Contact moreHref="/contact/" moreLabel="More ways to contact WebNestStudio" />
+      <Contact moreHref="/contact/" moreLabel="More ways to contact SemmAi" />
     </>
   )
 }
@@ -61,7 +63,7 @@ function Home() {
 function NotFound() {
   return (
     <section className="section pt-32 text-center">
-      <Seo meta={{ path: '/404/', title: 'Page not found | WebNestStudio', description: 'This page could not be found.' }} noindex />
+      <Seo meta={{ path: '/404/', title: 'Page not found | SemmAi', description: 'This page could not be found.' }} noindex />
       <h1 className="text-4xl font-extrabold">Page not found</h1>
       <Link to="/" className="btn-primary mt-6">Back to home</Link>
     </section>

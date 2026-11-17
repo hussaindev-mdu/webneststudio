@@ -14,6 +14,7 @@ export default function Hero() {
             <p className="rounded-full bg-accent-50 px-2.5 py-1 text-xs font-semibold sm:px-3 sm:text-sm text-accent-700 dark:bg-accent-500/15 dark:text-orange-300">{hero.eyebrow || brand.tagline}</p>
             {hero.label && <p className="rounded-full bg-accent-600 px-2.5 py-1 text-xs font-bold text-white sm:px-3 sm:text-sm">{hero.label}</p>}
           </div>
+          {hero.kicker && <p className="mb-3 font-heading text-sm font-bold uppercase tracking-wider text-brand-600 dark:text-brand-100 sm:text-base">{hero.kicker}</p>}
           <h1 className="text-balance text-[2rem] font-extrabold leading-tight tracking-normal sm:text-wrap sm:text-5xl sm:tracking-tight">{headline}</h1>
           <p className="mt-5 max-w-xl text-lg text-muted">{hero.subtext}</p>
           <p className="mt-6 max-w-xl font-semibold text-head">{hero.proposalLine}</p>

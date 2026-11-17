@@ -4,8 +4,8 @@ import { brand } from './content'
 export const privacy = {
   slug: 'privacy-policy',
   nav: 'Privacy Policy',
-  title: 'Privacy Policy | WebNestStudio',
-  description: 'How WebNestStudio collects, uses and shares your information, including contact form submissions (Formspree) and website analytics (Google Analytics).',
+  title: 'Privacy Policy | SemmAi',
+  description: 'How SemmAi collects, uses and shares your information, including contact form submissions (Formspree) and website analytics (Google Analytics).',
   h1: 'Privacy Policy',
   updated: '11 November 2026',
   updatedISO: '2026-11-11',
@@ -13,7 +13,7 @@ export const privacy = {
     {
       heading: 'Introduction',
       paras: [
-        `${brand.name} is an independently run web development studio by ${brand.owner}, serving businesses online across India. This policy explains what information we collect through webneststudio.live, how we use it and which third-party services are involved.`,
+        `${brand.name} is independently run by ${brand.owner}, serving businesses online across India. This policy explains what information we collect through semmai.net, how we use it and which third-party services are involved.`,
       ],
     },
     {

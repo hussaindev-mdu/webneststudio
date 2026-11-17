@@ -7,7 +7,7 @@ export const tnCities = ['Chennai', 'Madurai', 'Coimbatore', 'Tiruchirappalli', 
 // portfolio entries below look up their link in content.js `portfolio.projects` by `key` (= project name)
 
 // the pre-filled WhatsApp message (shared by both languages)
-export const tnWhatsAppMessage = "Hi WebNestStudio, I'd like a website for my business in Tamil Nadu."
+export const tnWhatsAppMessage = "Hi SemmAi, I'd like a website for my business in Tamil Nadu."
 
 export const en = {
   id: 'english',
@@ -15,7 +15,7 @@ export const en = {
   hero: {
     h1: 'Affordable Website Development for Businesses in Tamil Nadu',
     intro:
-      'WebNestStudio is an independently run, online-only website development studio. We build fast, mobile-friendly websites for restaurants, clinics, shops and other local businesses across Tamil Nadu, including Chennai, Madurai, Coimbatore, Trichy and Salem.',
+      'SemmAi is an independently run, online-only technology company. We build fast, mobile-friendly websites for restaurants, clinics, shops and other local businesses across Tamil Nadu, including Chennai, Madurai, Coimbatore, Trichy and Salem.',
     note: 'We work entirely online. We do not have offices or branches in these cities. We talk about your project on WhatsApp and calls, and we deliver your website online.',
     quote: 'Get a Free Quote',
     whatsapp: 'Chat on WhatsApp',
@@ -57,12 +57,12 @@ export const en = {
       { name: 'Trichy (Tiruchirappalli)', text: 'Website development in Trichy for restaurants, retailers and local services, provided online.' },
       { name: 'Salem', text: 'Website development in Salem for small businesses, provided online.' },
     ],
-    note: 'WebNestStudio is online-only. We do not operate physical offices or branches in these cities.',
+    note: 'SemmAi is online-only. We do not operate physical offices or branches in these cities.',
   },
   whyUs: {
-    heading: 'Why choose WebNestStudio',
+    heading: 'Why choose SemmAi',
     items: [
-      { title: 'Direct communication with the founder', text: 'You talk directly with Hussain, Founder of WebNestStudio, the person building your website.' },
+      { title: 'Direct communication with the founder', text: 'You talk directly with Hussain, Founder of SemmAi, the person building your website.' },
       { title: '7 years of experience', text: '7 years of website development experience.' },
       { title: 'React, JavaScript and Node.js', text: 'Your website is built by someone with hands-on experience in React, JavaScript and Node.js.' },
       { title: 'Fixed website packages', text: 'Fixed, one-time website packages, so you know the development fee before we start.' },
@@ -115,7 +115,7 @@ export const en = {
   faq: {
     heading: 'Website development in Tamil Nadu: common questions',
     items: [
-      { q: 'Do you have an office in Tamil Nadu?', a: 'No. WebNestStudio is an independently run, online-only studio. We work with businesses in Chennai, Madurai, Coimbatore, Trichy, Salem and across Tamil Nadu through WhatsApp, calls and email, and we deliver your website online.' },
+      { q: 'Do you have an office in Tamil Nadu?', a: 'No. SemmAi is an independently run, online-only studio. We work with businesses in Chennai, Madurai, Coimbatore, Trichy, Salem and across Tamil Nadu through WhatsApp, calls and email, and we deliver your website online.' },
       { q: 'How much does a website cost?', a: 'The Basic package is ₹5,999 and the Starter package is ₹9,999. Both are one-time website development fees. Domain and hosting are separate. Payment is 25% advance to start and the remaining 75% after you approve the final website.' },
       { q: 'How long does it take to build my website?', a: 'We deliver in six working days after we receive the advance payment and all required customer content and materials. If content, approvals or feedback are delayed, the timeline extends by the number of days of the delay.' },
       { q: 'Are domain and hosting included in the price?', a: 'No. Domain and hosting are separate, along with their renewal charges where applicable. The package price covers designing and building your website.' },
@@ -137,7 +137,7 @@ export const ta = {
   hero: {
     h1: 'தமிழ்நாட்டில் உள்ள வணிகங்களுக்கான மலிவான இணையதள உருவாக்கம்',
     intro:
-      'WebNestStudio என்பது சுயாதீனமாக நடத்தப்படும், முழுவதும் ஆன்லைனில் மட்டுமே செயல்படும் இணையதள உருவாக்க நிறுவனம். சென்னை, மதுரை, கோயம்புத்தூர், திருச்சி, சேலம் உட்பட தமிழ்நாடு முழுவதும் உள்ள உணவகங்கள், மருத்துவமனைகள், கடைகள் மற்றும் பிற உள்ளூர் வணிகங்களுக்கு வேகமான, மொபைலுக்கு ஏற்ற இணையதளங்களை உருவாக்குகிறோம்.',
+      'SemmAi என்பது சுயாதீனமாக நடத்தப்படும், முழுவதும் ஆன்லைனில் மட்டுமே செயல்படும் தொழில்நுட்ப நிறுவனம். சென்னை, மதுரை, கோயம்புத்தூர், திருச்சி, சேலம் உட்பட தமிழ்நாடு முழுவதும் உள்ள உணவகங்கள், மருத்துவமனைகள், கடைகள் மற்றும் பிற உள்ளூர் வணிகங்களுக்கு வேகமான, மொபைலுக்கு ஏற்ற இணையதளங்களை உருவாக்குகிறோம்.',
     note: 'நாங்கள் முழுவதும் ஆன்லைனில் மட்டுமே செயல்படுகிறோம். இந்த நகரங்களில் எங்களுக்கு அலுவலகங்களோ கிளைகளோ இல்லை. உங்கள் திட்டத்தைப் பற்றி WhatsApp மற்றும் அழைப்புகள் மூலம் பேசுகிறோம்; இணையதளத்தை ஆன்லைனிலேயே வழங்குகிறோம்.',
     quote: 'இலவச மதிப்பீட்டைப் பெறுங்கள்',
     whatsapp: 'WhatsApp-ல் பேசுங்கள்',
@@ -179,12 +179,12 @@ export const ta = {
       { name: 'திருச்சி (திருச்சிராப்பள்ளி)', text: 'திருச்சியில் உள்ள உணவகங்கள், சில்லறை வணிகங்கள் மற்றும் உள்ளூர் சேவைகளுக்கான இணையதள உருவாக்கம், ஆன்லைனில் வழங்கப்படுகிறது.' },
       { name: 'சேலம்', text: 'சேலத்தில் உள்ள சிறு வணிகங்களுக்கான இணையதள உருவாக்கம், ஆன்லைனில் வழங்கப்படுகிறது.' },
     ],
-    note: 'WebNestStudio ஆன்லைனில் மட்டுமே செயல்படுகிறது. இந்த நகரங்களில் நாங்கள் நேரடி அலுவலகங்களையோ கிளைகளையோ நடத்தவில்லை.',
+    note: 'SemmAi ஆன்லைனில் மட்டுமே செயல்படுகிறது. இந்த நகரங்களில் நாங்கள் நேரடி அலுவலகங்களையோ கிளைகளையோ நடத்தவில்லை.',
   },
   whyUs: {
-    heading: 'WebNestStudio-வை ஏன் தேர்ந்தெடுக்க வேண்டும்',
+    heading: 'SemmAi-ஐ ஏன் தேர்ந்தெடுக்க வேண்டும்',
     items: [
-      { title: 'நிறுவனருடன் நேரடித் தொடர்பு', text: 'WebNestStudio-வின் நிறுவனர் ஹுசைனுடன் நேரடியாகப் பேசலாம். உங்கள் இணையதளத்தை உருவாக்குபவரும் அவரே.' },
+      { title: 'நிறுவனருடன் நேரடித் தொடர்பு', text: 'SemmAi-இன் நிறுவனர் ஹுசைனுடன் நேரடியாகப் பேசலாம். உங்கள் இணையதளத்தை உருவாக்குபவரும் அவரே.' },
       { title: '7 ஆண்டுகள் அனுபவம்', text: 'இணையதள உருவாக்கத்தில் 7 ஆண்டுகள் அனுபவம்.' },
       { title: 'React, JavaScript மற்றும் Node.js', text: 'React, JavaScript மற்றும் Node.js தொழில்நுட்பங்களில் நேரடி அனுபவம் உள்ளவர் உங்கள் இணையதளத்தை உருவாக்குகிறார்.' },
       { title: 'நிலையான இணையதளத் தொகுப்புகள்', text: 'ஒருமுறை செலுத்தும் நிலையான இணையதளத் தொகுப்புகள். தொடங்குவதற்கு முன்பே மேம்பாட்டுக் கட்டணம் உங்களுக்குத் தெரியும்.' },
@@ -237,7 +237,7 @@ export const ta = {
   faq: {
     heading: 'தமிழ்நாட்டில் இணையதள உருவாக்கம்: அடிக்கடி கேட்கப்படும் கேள்விகள்',
     items: [
-      { q: 'தமிழ்நாட்டில் உங்களுக்கு அலுவலகம் உள்ளதா?', a: 'இல்லை. WebNestStudio சுயாதீனமாக நடத்தப்படும், ஆன்லைனில் மட்டுமே செயல்படும் நிறுவனம். சென்னை, மதுரை, கோயம்புத்தூர், திருச்சி, சேலம் மற்றும் தமிழ்நாடு முழுவதும் உள்ள வணிகங்களுடன் WhatsApp, அழைப்புகள் மற்றும் மின்னஞ்சல் மூலம் பணியாற்றி, இணையதளத்தை ஆன்லைனிலேயே வழங்குகிறோம்.' },
+      { q: 'தமிழ்நாட்டில் உங்களுக்கு அலுவலகம் உள்ளதா?', a: 'இல்லை. SemmAi சுயாதீனமாக நடத்தப்படும், ஆன்லைனில் மட்டுமே செயல்படும் நிறுவனம். சென்னை, மதுரை, கோயம்புத்தூர், திருச்சி, சேலம் மற்றும் தமிழ்நாடு முழுவதும் உள்ள வணிகங்களுடன் WhatsApp, அழைப்புகள் மற்றும் மின்னஞ்சல் மூலம் பணியாற்றி, இணையதளத்தை ஆன்லைனிலேயே வழங்குகிறோம்.' },
       { q: 'ஒரு இணையதளத்திற்கு எவ்வளவு செலவாகும்?', a: 'Basic தொகுப்பு ₹5,999, Starter தொகுப்பு ₹9,999. இரண்டும் ஒருமுறை செலுத்தும் இணையதள மேம்பாட்டுக் கட்டணங்கள். டொமைன் மற்றும் ஹோஸ்டிங் தனியாகக் கணக்கிடப்படும். தொடங்குவதற்கு 25% முன்பணம், இறுதி இணையதளத்தை நீங்கள் ஒப்புக்கொண்ட பிறகு மீதமுள்ள 75% செலுத்த வேண்டும்.' },
       { q: 'என் இணையதளத்தை உருவாக்க எவ்வளவு நேரமாகும்?', a: 'முன்பணத்தையும், தேவையான அனைத்து வாடிக்கையாளர் உள்ளடக்கங்கள் மற்றும் பொருட்களையும் பெற்ற பிறகு, ஆறு வேலை நாட்களில் வழங்குகிறோம். உள்ளடக்கம், ஒப்புதல்கள் அல்லது கருத்துகள் தாமதமானால், தாமதமான நாட்களின் எண்ணிக்கைக்கு ஏற்ப காலக்கெடு நீளும்.' },
       { q: 'டொமைன் மற்றும் ஹோஸ்டிங் விலையில் சேர்க்கப்பட்டுள்ளதா?', a: 'இல்லை. டொமைன் மற்றும் ஹோஸ்டிங், பொருந்தும் இடங்களில் அவற்றின் புதுப்பித்தல் கட்டணங்களுடன் சேர்த்து, தனியாகக் கணக்கிடப்படும். தொகுப்பு விலை உங்கள் இணையதளத்தை வடிவமைத்து உருவாக்குவதற்கு மட்டுமே.' },

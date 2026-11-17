@@ -1,28 +1,61 @@
 import { Link, useLocation } from 'react-router-dom'
 import { brand } from '../data/content'
 
-export function LogoIcon({ className = 'h-8 w-8' }) {
+// SemmAi logo: "SAi" inside a laptop, with a gold spark as the dot of the i.
+// Master files (SVG/PNG, light + dark): logo/semmai/. Geometry is in an 848 x 489 box.
+const LIGHT = { ink: '#101C3D', ai: '#2563EB', spark: '#F59E0B' }
+const DARK = { ink: '#FFFFFF', ai: '#6B8EF5', spark: '#FBBF24' }
+const SPARK = 'M557 139C563.5 157.1 565.9 159.5 584 166C565.9 172.5 563.5 174.9 557 193C550.5 174.9 548.1 172.5 530 166C548.1 159.5 550.5 157.1 557 139Z'
+
+// `gap` is the background colour: it separates the A from the S and cuts the laptop's notch.
+function Mark({ c, gap }) {
   return (
-    <svg className={className} viewBox="0 0 32 32" aria-hidden="true">
-      <rect width="32" height="32" rx="8" className="fill-brand-900 dark:fill-brand-500" />
-      <path d="M16 6 6 14v2h2v9h16v-9h2v-2z" fill="none" stroke="#fff" strokeWidth="2" strokeLinejoin="round" />
-      <path d="M11 20c2 2.5 8 2.5 10 0" stroke="#FB923C" strokeWidth="2.2" strokeLinecap="round" fill="none" />
+    <>
+      <rect x="64" y="12" width="720" height="400" rx="36" fill="none" stroke={c.ink} strokeWidth="24" />
+      <path d="M0 437H848L804 489H44Z" fill={c.ink} />
+      <rect x="360" y="438" width="128" height="15" rx="7.5" fill={gap} />
+      <path d="M338.7 336.0Q314.3 336.0 291.8 329.6Q269.2 323.2 255.0 312.9L273.5 268.6Q286.9 277.8 304.4 283.6Q321.9 289.4 339.1 289.4Q350.9 289.4 357.9 287.2Q364.9 285.0 368.1 281.2Q371.4 277.3 371.4 272.2Q371.4 265.0 365.3 260.8Q359.1 256.6 349.1 253.8Q339.1 251.1 327.1 248.4Q315.1 245.7 303.0 241.5Q290.9 237.3 280.9 230.5Q270.8 223.7 264.7 212.5Q258.6 201.4 258.6 184.4Q258.6 165.6 268.3 150.1Q278.1 134.6 297.6 125.3Q317.2 116.0 346.7 116.0Q366.0 116.0 384.9 120.6Q403.8 125.3 418.6 134.5L401.4 178.7Q387.2 170.6 373.2 166.6Q359.3 162.6 346.2 162.6Q334.6 162.6 327.5 165.2Q320.4 167.8 317.3 172.0Q314.2 176.2 314.2 181.5Q314.2 188.4 320.3 192.5Q326.5 196.6 336.5 199.2Q346.5 201.8 358.6 204.5Q370.7 207.1 382.7 211.3Q394.7 215.4 404.7 222.2Q414.7 228.9 420.9 240.0Q427.0 251.0 427.0 267.6Q427.0 286.2 417.2 301.7Q407.4 317.2 387.9 326.6Q368.4 336.0 338.7 336.0Z" fill={c.ink} />
+      <path d="M379 332L452 164H484L530 332H494L484 301H430L416 332ZM463.7 222L477 270H442.9Z" fill={c.ai} fillRule="evenodd" stroke={gap} strokeWidth="9" paintOrder="stroke" />
+      <rect x="535" y="215" width="43" height="117" fill={c.ai} />
+      <path d={SPARK} fill={c.spark} />
+    </>
+  )
+}
+
+// onDark: always use the dark-background colours (e.g. the navy footer). Otherwise follow the site theme.
+export function LogoMark({ className = 'h-10 w-auto', onDark = false, gap }) {
+  return (
+    <svg className={className} viewBox="0 0 848 489" role="img" aria-label={brand.name}>
+      {onDark ? (
+        <Mark c={DARK} gap={gap || '#0A2742'} />
+      ) : (
+        <>
+          <g className="dark:hidden"><Mark c={LIGHT} gap={gap || 'rgb(var(--c-surface))'} /></g>
+          <g className="hidden dark:inline"><Mark c={DARK} gap={gap || 'rgb(var(--c-surface))'} /></g>
+        </>
+      )}
     </svg>
   )
 }
 
+// The brand name as text ("Semm" + blue "Ai"), for places that show the name next to the logo image.
+export function Wordmark({ light = false, className = '' }) {
+  const [, semm, ai] = brand.name.match(/^(.*?)(Ai)$/) || [null, brand.name, '']
+  return (
+    <span className={`font-heading font-extrabold tracking-tight ${light ? 'text-white' : 'text-head'} ${className}`}>
+      {semm}<span className={light ? 'text-[#6B8EF5]' : 'text-[#2563EB] dark:text-[#6B8EF5]'}>{ai}</span>
+    </span>
+  )
+}
+
+// Single-word logo: the laptop mark only (the brand name is its accessible label).
 export default function Logo({ light = false, small = false }) {
-  const web = brand.name.replace('Studio', '')
   const home = useLocation().pathname === '/'
   const Tag = home ? 'a' : Link
   const target = home ? { href: '#top' } : { to: '/' }
   return (
-    <Tag {...target} className="flex items-center gap-2" aria-label={`${brand.name} home`}>
-      <LogoIcon className={small ? 'h-8 w-8' : 'h-9 w-9'} />
-      <span className={`font-heading text-xl font-extrabold tracking-tight ${light ? 'text-white' : 'text-head'}`}>
-        {web}
-        <span className={light ? 'text-orange-300' : 'text-accent-600'}>Studio</span>
-      </span>
+    <Tag {...target} className="flex items-center" aria-label={`${brand.name} home`}>
+      <LogoMark onDark={light} className={`${small ? 'h-9' : 'h-11'} w-auto transition-all`} />
     </Tag>
   )
 }
