@@ -37,7 +37,7 @@ export const hero = {
   kicker: 'Building intelligent digital experiences',
   subtext:
     'SemmAI builds fast, mobile-friendly websites that help customers find you on Google, trust your business and contact you in one tap. AI assistants and automation are coming soon.',
-  eyebrow: 'Websites starting from ₹5,999',
+  eyebrow: 'Websites starting from ₹4,999',
   primaryCta: 'Get a Free Quote',
   proposalLine: 'Tell us about your business. Get a website proposal on WhatsApp.',
   secondaryCta: 'Chat on WhatsApp',
@@ -86,7 +86,7 @@ export const solutions = {
   live: 'Available now',
   soon: 'Coming soon',
   items: [
-    { id: 'website-development', title: 'Website Development', text: 'Fast, mobile-friendly websites for restaurants, clinics, real estate and small businesses across India, with fixed packages from ₹5,999 and 6-working-day delivery.', href: '/website-development/', cta: 'Explore website development' },
+    { id: 'website-development', title: 'Website Development', text: 'Fast, mobile-friendly websites for restaurants, clinics, real estate and small businesses across India, with fixed packages from ₹4,999 and 6-working-day delivery.', href: '/website-development/', cta: 'Explore website development' },
     { id: 'whatsapp-ai', title: 'WhatsApp AI Assistants', text: 'An assistant on WhatsApp to help answer common customer questions. We are still building this service.', soon: true, cta: 'Ask to be notified' },
     { id: 'ai-support', title: 'AI Customer Support', text: 'Help for answering routine customer enquiries on your website and chat channels. Not available yet.', soon: true, cta: 'Ask to be notified' },
     { id: 'automation', title: 'Business Automation', text: 'Automating repetitive tasks and connecting the tools your business already uses. Not available yet.', soon: true, cta: 'Ask to be notified' },
@@ -104,11 +104,11 @@ export const pricing = {
     {
       name: 'Basic',
       originalPrice: '₹9,999',
-      price: '₹5,999',
+      price: '₹4,999',
       period: 'one-time fee',
       description: 'A simple, professional website to get you online.',
-      features: ['1–5 pages', 'Mobile-friendly design', 'WhatsApp button', 'Google Maps', '6-working-day delivery', 'No contact form or 3D animations'],
-      previewNote: 'No contact form or 3D animations', // always shown in the home-page preview
+      features: ['1–5 pages', 'Mobile-friendly design', 'WhatsApp button', 'Google Maps', '6-working-day delivery', 'No contact form, SEO setup or 3D animations'],
+      previewNote: 'No contact form, SEO setup or 3D animations', // always shown in the home-page preview
       popular: false,
     },
     {
@@ -116,8 +116,8 @@ export const pricing = {
       originalPrice: '₹15,999',
       price: '₹9,999',
       period: 'one-time fee',
-      description: 'Everything in Basic, plus a contact form and 3D animations.',
-      features: ['Everything in Basic', 'Contact form', '3D animations', '1–5 pages', '6-working-day delivery', 'Need an admin panel to manage your content? Additional charges apply'],
+      description: 'Everything in Basic, plus a contact form, SEO setup and 3D animations.',
+      features: ['Everything in Basic', 'Contact form', 'On-page SEO setup', '3D animations', '1–5 pages', '6-working-day delivery', 'Need an admin panel to manage your content? Additional charges apply'],
       previewNote: 'Need an admin panel to manage your content? Additional charges apply', // always shown in the home-page preview
       popular: true,
     },
@@ -166,7 +166,7 @@ export const about = {
     'SemmAI is an independently run technology company serving businesses online across India. Today we build websites; WhatsApp AI assistants, AI customer support, business automation and custom software are coming soon. You communicate directly with the person building your solution.',
   ],
   reasons: [
-    { icon: 'tag', title: 'Fixed packages', text: 'Website packages from ₹5,999, with a fixed one-time development fee.' },
+    { icon: 'tag', title: 'Fixed packages', text: 'Website packages from ₹4,999, with a fixed one-time development fee.' },
     { icon: 'eye', title: 'Design preview first', text: 'We send a homepage design preview before we go further.' },
     { icon: 'message', title: 'Direct on WhatsApp', text: 'You talk to the person building your site, not a support queue.' },
     { icon: 'wrench', title: '12 months free maintenance', text: '12 months of free maintenance from the website launch date. After that, you can continue with the maintenance plan.' },

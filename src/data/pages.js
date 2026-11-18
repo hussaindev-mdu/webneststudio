@@ -6,7 +6,7 @@ export const pages = [
     slug: 'website-development',
     nav: 'Website Development',
     title: 'Website Development Company in India | SemmAI',
-    description: 'Website development from ₹5,999, delivered in 6 working days after advance payment and content. 12 months of free maintenance from the website launch date.',
+    description: 'Website development from ₹4,999, delivered in 6 working days after advance payment and content. 12 months of free maintenance from the website launch date.',
     h1: 'Affordable website development for Indian businesses',
     intro: 'SemmAI builds fast, clean, mobile-friendly websites for local businesses in India. You get a fixed price, 6-working-day delivery and a direct line to the person building your site.',
     includes: [
@@ -50,7 +50,7 @@ export const pages = [
     slug: 'business-website-design',
     nav: 'Business Website Design',
     title: 'Small Business Website Design in India | SemmAI',
-    description: 'Professional small business website design from ₹5,999. Mobile-friendly, quick to load and built to turn visitors into calls and WhatsApp enquiries.',
+    description: 'Professional small business website design from ₹4,999. Mobile-friendly, quick to load and built to turn visitors into calls and WhatsApp enquiries.',
     h1: 'Small business website design that brings in enquiries',
     intro: 'A good business website does one job well: it helps a stranger understand what you offer, trust you and contact you. We design small business websites around exactly that.',
     includes: [
@@ -94,7 +94,7 @@ export const pages = [
     slug: 'restaurant-website-design',
     nav: 'Restaurant Website Design',
     title: 'Restaurant Website Design in India | SemmAI',
-    description: 'Restaurant website design with menu, gallery and WhatsApp booking from ₹5,999. Delivered in 6 working days after advance payment and content.',
+    description: 'Restaurant website design with menu, gallery and WhatsApp booking from ₹4,999. Delivered in 6 working days after advance payment and content.',
     h1: 'Restaurant website design with menu, gallery and easy booking',
     intro: 'Hungry customers decide in seconds. We design restaurant websites that show your food, your menu and your location straight away, and make booking a table a single tap.',
     includes: [
@@ -136,7 +136,7 @@ export const pages = [
     slug: 'clinic-website-design',
     nav: 'Clinic Website Design',
     title: 'Clinic & Doctor Website Design in India | SemmAI',
-    description: 'Clinic website design with services, doctor profile and appointment enquiries from ₹5,999. Delivered in 6 working days after advance payment and content.',
+    description: 'Clinic website design with services, doctor profile and appointment enquiries from ₹4,999. Delivered in 6 working days after advance payment and content.',
     h1: 'Clinic website design that patients can trust and use',
     intro: 'Patients look for a clinic online before they call. We build clean, calm and accurate clinic and doctor websites that show your services, your timings and how to book an appointment.',
     includes: [
@@ -180,7 +180,7 @@ export const pages = [
     slug: 'real-estate-website-design',
     nav: 'Real Estate Website Design',
     title: 'Real Estate Website Design in India | SemmAI',
-    description: 'Real estate website design with property pages, galleries and WhatsApp enquiries from ₹5,999. Delivered in 6 working days after advance payment and content.',
+    description: 'Real estate website design with property pages, galleries and WhatsApp enquiries from ₹4,999. Delivered in 6 working days after advance payment and content.',
     h1: 'Real estate website design for agents and builders',
     intro: 'Buyers browse properties on their phones long before they call an agent. We design real estate websites that present each property clearly and turn interest into WhatsApp and phone enquiries.',
     includes: [
@@ -227,7 +227,7 @@ export const pages = [
     linkText: 'Website development in Tamil Nadu (English + தமிழ்)',
     serviceType: 'Website development',
     title: 'Website Development in Tamil Nadu | SemmAI',
-    description: 'Affordable website development for businesses in Tamil Nadu from ₹5,999. Online service for Chennai, Madurai, Coimbatore, Trichy and Salem. English and தமிழ்.',
+    description: 'Affordable website development for businesses in Tamil Nadu from ₹4,999. Online service for Chennai, Madurai, Coimbatore, Trichy and Salem. English and தமிழ்.',
     h1: 'Affordable Website Development for Businesses in Tamil Nadu',
     includes: [],
     sections: [],
@@ -238,8 +238,8 @@ export const pages = [
     slug: 'pricing',
     nav: 'Pricing',
     linkText: 'Website development pricing',
-    title: 'Website Development Cost in India from ₹5,999 | SemmAI',
-    description: 'Website development packages in India: Basic ₹5,999, Starter ₹9,999. 12 months of free maintenance from the website launch date. No hidden fees.',
+    title: 'Website Development Cost in India from ₹4,999 | SemmAI',
+    description: 'Website development packages in India: Basic ₹4,999, Starter ₹9,999 with SEO setup. 12 months of free maintenance from the website launch date. No hidden fees.',
     h1: 'Website development cost in India: simple, fixed packages',
     intro: 'Website prices vary widely depending on who builds the site and what it includes. At SemmAI you pick a fixed package, so you know the cost before we start.',
     includes: [],
@@ -247,11 +247,11 @@ export const pages = [
       {
         heading: 'What affects the cost of a website',
         paras: ['Four things move the price most: the number of pages, whether you need a contact form or other features, whether you need an admin panel to edit content yourself, and how much content (text and photos) we have to prepare.'],
-        bullets: ['Pages: our packages cover 1 to 5 pages', 'Features: a contact form and 3D animations are in the Starter package', 'Admin panel: additional charges apply', 'Domain and hosting: separate, billed where applicable'],
+        bullets: ['Pages: our packages cover 1 to 5 pages', 'Features: a contact form, SEO setup and 3D animations are in the Starter package', 'Admin panel: additional charges apply', 'Domain and hosting: separate, billed where applicable'],
       },
       {
         heading: 'What is included in our packages',
-        paras: ['Both packages include mobile-friendly design, a WhatsApp button, Google Maps and 6-working-day delivery. The Starter package adds a contact form and 3D animations. Every website includes 12 months of free maintenance from the website launch date.'],
+        paras: ['Both packages include mobile-friendly design, a WhatsApp button, Google Maps and 6-working-day delivery. The Starter package adds a contact form, on-page SEO setup and 3D animations. Every website includes 12 months of free maintenance from the website launch date.'],
       },
       {
         heading: 'Costs outside the package',
@@ -260,7 +260,7 @@ export const pages = [
     ],
     faq: [
       { q: 'Are there any hidden charges?', a: 'No. The package price covers design and development. Domain, hosting and renewals are separate and we explain them upfront.' },
-      { q: 'Why is Basic cheaper than Starter?', a: 'Basic has no contact form or 3D animations. Starter adds both, so visitors can send enquiries straight to your email and the site feels more interactive.' },
+      { q: 'Why is Basic cheaper than Starter?', a: 'Basic has no contact form, SEO setup or 3D animations. Starter adds all three, so visitors can send enquiries straight to your email, the site is set up for search engines and it feels more interactive.' },
       { q: 'Can I upgrade later?', a: 'Yes. You can start with Basic and add a contact form or more pages later.' },
     ],
     show: ['pricing'],

@@ -16,7 +16,7 @@ export const homeMeta = {
   path: '/',
   title: 'Affordable Website Development in India | SemmAI',
   description:
-    'Websites for restaurants, clinics, real estate and small businesses across India from ₹5,999. Delivered in 6 working days after advance payment and content.',
+    'Websites for restaurants, clinics, real estate and small businesses across India from ₹4,999. Delivered in 6 working days after advance payment and content.',
 }
 
 export const metaFor = (page) => ({ path: pathFor(page.slug), title: page.title, description: page.description, ...(page.localeAlternate ? { localeAlternate: page.localeAlternate } : {}) })
@@ -64,7 +64,7 @@ const tamilNaduArea = [
 ]
 
 // Starting price = the lowest package in content.js (Basic). An Offer is added only to pages whose own text states
-// that price ("from ₹5,999" in the description, and "Packages start at ₹5,999" on the page), so the markup matches
+// that price ("from ₹4,999" in the description, and "Packages start at ₹4,999" on the page), so the markup matches
 // what visitors see. No availability or other claims are made.
 const START_PRICE_TEXT = pricing.packages[0].price
 const START_PRICE = Number(START_PRICE_TEXT.replace(/[^\d]/g, ''))
