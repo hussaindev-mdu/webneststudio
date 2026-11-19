@@ -2,7 +2,8 @@ import { useEffect, useState } from 'react'
 import { Menu, X, ChevronDown } from 'lucide-react'
 import Logo from './Logo'
 import ThemeToggle from './ThemeToggle'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
+import CurrencyToggle from './CurrencyToggle'
 import { nav } from '../data/content'
 import { pages } from '../data/pages'
 import { pathFor } from '../data/seo'
@@ -14,6 +15,8 @@ export default function Header() {
   const [scrolled, setScrolled] = useState(false)
   const [open, setOpen] = useState(false)
   const a = useAnchor()
+  // the Tamil Nadu page is always in rupees, so the $ / ₹ switch is hidden there
+  const showCurrency = !useLocation().pathname.includes('tamil-nadu')
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24)
@@ -41,6 +44,7 @@ export default function Header() {
           ) : (
             <a key={l.href} href={a(l.href)} className="text-sm font-medium text-ink hover:text-accent-600">{l.label}</a>
           ))}
+          {showCurrency && <CurrencyToggle />}
           <ThemeToggle />
           <a href={a('#contact')} className="btn-primary !px-5 !py-2 text-sm">Get a Free Quote</a>
         </nav>
@@ -59,6 +63,13 @@ export default function Header() {
       </div>
       {open && (
         <nav id="mobile-menu" className="border-t border-line bg-surface px-5 pb-5 pt-2 md:hidden" aria-label="Mobile">
+          {/* on phones the currency switch lives in the menu so the header bar stays uncluttered */}
+          {showCurrency && (
+            <div className="flex items-center justify-between border-b border-line py-3">
+              <span className="text-base font-medium">Currency</span>
+              <CurrencyToggle />
+            </div>
+          )}
           {nav.map((l) => l.menu ? (
             <div key={l.href} className="border-b border-line py-3">
               <p className="text-base font-medium">{l.label}</p>

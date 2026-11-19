@@ -5,10 +5,10 @@ export const pages = [
   {
     slug: 'website-development',
     nav: 'Website Development',
-    title: 'Website Development Company in India | SemmAI',
-    description: 'Website development from ₹4,999, delivered in 6 working days after advance payment and content. 12 months of free maintenance from the website launch date.',
-    h1: 'Affordable website development for Indian businesses',
-    intro: 'SemmAI builds fast, clean, mobile-friendly websites for local businesses in India. You get a fixed price, 6-working-day delivery and a direct line to the person building your site.',
+    title: 'Affordable Website Development Company | SemmAI',
+    description: 'Website development from {basic}, delivered in 6 working days after advance payment and content. 12 months of free maintenance from the website launch date.',
+    h1: 'Affordable website development for small businesses in the US and India',
+    intro: 'SemmAI builds fast, clean, mobile-friendly websites for local businesses in the US and India. You get a fixed price, 6-working-day delivery and a direct line to the person building your site.',
     includes: [
       { title: 'Mobile-first design', text: 'Most of your visitors are on phones, so every page is designed for a small screen first and then scaled up.' },
       { title: 'Search-friendly structure', text: 'Clean headings, page titles, descriptions, fast loading and a sitemap give Google a clear picture of your business.' },
@@ -29,7 +29,7 @@ export const pages = [
         heading: 'Why we keep website development affordable',
         paras: [
           'There are no account managers, no agency overheads and no long contracts. You talk to us directly on WhatsApp, approve a design preview before anything goes live, and pay 25% to start and 75% after you approve the final site.',
-          'Domain and hosting are billed separately where applicable (a domain is typically around ₹800 to ₹1,200 per year), so you always know what you are paying for and you own everything.',
+          'Domain and hosting are billed separately where applicable (a domain is typically around {domainCost} per year), so you always know what you are paying for and you own everything.',
         ],
       },
       {
@@ -49,8 +49,8 @@ export const pages = [
   {
     slug: 'business-website-design',
     nav: 'Business Website Design',
-    title: 'Small Business Website Design in India | SemmAI',
-    description: 'Professional small business website design from ₹4,999. Mobile-friendly, quick to load and built to turn visitors into calls and WhatsApp enquiries.',
+    title: 'Small Business Website Design | SemmAI',
+    description: 'Professional small business website design from {basic}. Mobile-friendly, quick to load and built to turn visitors into calls and WhatsApp enquiries.',
     h1: 'Small business website design that brings in enquiries',
     intro: 'A good business website does one job well: it helps a stranger understand what you offer, trust you and contact you. We design small business websites around exactly that.',
     includes: [
@@ -93,8 +93,8 @@ export const pages = [
   {
     slug: 'restaurant-website-design',
     nav: 'Restaurant Website Design',
-    title: 'Restaurant Website Design in India | SemmAI',
-    description: 'Restaurant website design with menu, gallery and WhatsApp booking from ₹4,999. Delivered in 6 working days after advance payment and content.',
+    title: 'Restaurant Website Design | SemmAI',
+    description: 'Restaurant website design with menu, gallery and WhatsApp booking from {basic}. Delivered in 6 working days after advance payment and content.',
     h1: 'Restaurant website design with menu, gallery and easy booking',
     intro: 'Hungry customers decide in seconds. We design restaurant websites that show your food, your menu and your location straight away, and make booking a table a single tap.',
     includes: [
@@ -135,8 +135,8 @@ export const pages = [
   {
     slug: 'clinic-website-design',
     nav: 'Clinic Website Design',
-    title: 'Clinic & Doctor Website Design in India | SemmAI',
-    description: 'Clinic website design with services, doctor profile and appointment enquiries from ₹4,999. Delivered in 6 working days after advance payment and content.',
+    title: 'Clinic & Doctor Website Design | SemmAI',
+    description: 'Clinic website design with services, doctor profile and appointment enquiries from {basic}. Delivered in 6 working days after advance payment and content.',
     h1: 'Clinic website design that patients can trust and use',
     intro: 'Patients look for a clinic online before they call. We build clean, calm and accurate clinic and doctor websites that show your services, your timings and how to book an appointment.',
     includes: [
@@ -179,8 +179,8 @@ export const pages = [
   {
     slug: 'real-estate-website-design',
     nav: 'Real Estate Website Design',
-    title: 'Real Estate Website Design in India | SemmAI',
-    description: 'Real estate website design with property pages, galleries and WhatsApp enquiries from ₹4,999. Delivered in 6 working days after advance payment and content.',
+    title: 'Real Estate Website Design | SemmAI',
+    description: 'Real estate website design with property pages, galleries and WhatsApp enquiries from {basic}. Delivered in 6 working days after advance payment and content.',
     h1: 'Real estate website design for agents and builders',
     intro: 'Buyers browse properties on their phones long before they call an agent. We design real estate websites that present each property clearly and turn interest into WhatsApp and phone enquiries.',
     includes: [
@@ -222,6 +222,7 @@ export const pages = [
   {
     slug: 'website-development-tamil-nadu',
     custom: true, // rendered by TamilNaduPage (bilingual), content in tamilNadu.js
+    currency: 'inr', // this page is for Tamil Nadu: always shown in rupees
     localeAlternate: 'ta_IN',
     nav: 'Website Development in Tamil Nadu',
     linkText: 'Website development in Tamil Nadu (English + தமிழ்)',
@@ -238,9 +239,9 @@ export const pages = [
     slug: 'pricing',
     nav: 'Pricing',
     linkText: 'Website development pricing',
-    title: 'Website Development Cost in India from ₹4,999 | SemmAI',
-    description: 'Website development packages in India: Basic ₹4,999, Starter ₹9,999 with SEO setup. 12 months of free maintenance from the website launch date. No hidden fees.',
-    h1: 'Website development cost in India: simple, fixed packages',
+    title: 'Website Development Cost from {basic} | SemmAI',
+    description: 'Website development packages: Basic {basic}, Starter {starter} with SEO setup. 12 months of free maintenance from the website launch date. No hidden fees.',
+    h1: 'Website development cost: simple, fixed packages',
     intro: 'Website prices vary widely depending on who builds the site and what it includes. At SemmAI you pick a fixed package, so you know the cost before we start.',
     includes: [],
     sections: [
@@ -255,7 +256,7 @@ export const pages = [
       },
       {
         heading: 'Costs outside the package',
-        paras: ['The package price is a one-time development fee. A domain name typically costs around ₹800 to ₹1,200 per year and hosting can be free or low-cost depending on the setup. We guide you through the choices and set everything up. After the first 12 months, maintenance is optional: you can continue at ₹375 per month billed yearly (₹4,500), or ₹500 per month billed every 6 months (₹3,000), or manage your website yourself. Website backups are not included in the packages or the free maintenance, so you arrange your own through your hosting provider or another service.'],
+        paras: ['The package price is a one-time development fee. A domain name typically costs around {domainCost} per year and hosting can be free or low-cost depending on the setup. We guide you through the choices and set everything up. After the first 12 months, maintenance is optional: you can continue at {maintYearMonthly} per month billed yearly ({maintYearTotal}), or {maintHalfMonthly} per month billed every 6 months ({maintHalfTotal}), or manage your website yourself. Website backups are not included in the packages or the free maintenance, so you arrange your own through your hosting provider or another service.'],
       },
     ],
     faq: [
@@ -295,7 +296,7 @@ export const pages = [
     title: 'Contact a Website Developer | SemmAI',
     description: 'Contact SemmAI for a free website quote. Message us on WhatsApp, email or the form and get a proposal within 24 hours.',
     h1: 'Contact a website developer: get your free quote',
-    intro: 'SemmAI is independently run by Hussain and serves businesses online across India. Tell us about your business and what you need. We reply to new enquiries within 24 hours, usually much sooner, with a clear proposal and price. If you are an existing customer with a maintenance request, we aim to respond within 3 business days.',
+    intro: 'SemmAI is independently run by Hussain and serves businesses online in the US and India. Tell us about your business and what you need. We reply to new enquiries within 24 hours, usually much sooner, with a clear proposal and price. If you are an existing customer with a maintenance request, we aim to respond within 3 business days.',
     includes: [],
     sections: [],
     show: [],

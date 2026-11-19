@@ -31,13 +31,13 @@ export const nav = [
 
 export const hero = {
   // {niche} and {city} are filled in automatically from `brand`
-  headline: 'Affordable Website Development for Businesses Across India, Delivered in 6 Working Days',
+  headline: 'Affordable Website Development for Businesses in the US and India, Delivered in 6 Working Days',
   deliveryNote: 'Delivery: 6 working days after receiving the advance payment and all required customer content and materials.',
   // the broader company message sits above the H1; the H1 keeps the website-development focus for SEO
   kicker: 'Building intelligent digital experiences',
   subtext:
     'SemmAI builds fast, mobile-friendly websites that help customers find you on Google, trust your business and contact you in one tap. AI assistants and automation are coming soon.',
-  eyebrow: 'Websites starting from ₹4,999',
+  eyebrow: 'Websites starting from {basic}',
   primaryCta: 'Get a Free Quote',
   proposalLine: 'Tell us about your business. Get a website proposal on WhatsApp.',
   secondaryCta: 'Chat on WhatsApp',
@@ -86,7 +86,7 @@ export const solutions = {
   live: 'Available now',
   soon: 'Coming soon',
   items: [
-    { id: 'website-development', title: 'Website Development', text: 'Fast, mobile-friendly websites for restaurants, clinics, real estate and small businesses across India, with fixed packages from ₹4,999 and 6-working-day delivery.', href: '/website-development/', cta: 'Explore website development' },
+    { id: 'website-development', title: 'Website Development', text: 'Fast, mobile-friendly websites for restaurants, clinics, real estate and small businesses in the US and India, with fixed packages from {basic} and 6-working-day delivery.', href: '/website-development/', cta: 'Explore website development' },
     { id: 'whatsapp-ai', title: 'WhatsApp AI Assistants', text: 'An assistant on WhatsApp to help answer common customer questions. We are still building this service.', soon: true, cta: 'Ask to be notified' },
     { id: 'ai-support', title: 'AI Customer Support', text: 'Help for answering routine customer enquiries on your website and chat channels. Not available yet.', soon: true, cta: 'Ask to be notified' },
     { id: 'automation', title: 'Business Automation', text: 'Automating repetitive tasks and connecting the tools your business already uses. Not available yet.', soon: true, cta: 'Ask to be notified' },
@@ -103,8 +103,8 @@ export const pricing = {
   packages: [
     {
       name: 'Basic',
-      originalPrice: '₹9,999',
-      price: '₹4,999',
+      originalPrice: '{basicWas}',
+      price: '{basic}',
       period: 'one-time fee',
       description: 'A simple, professional website to get you online.',
       features: ['1–5 pages', 'Mobile-friendly design', 'WhatsApp button', 'Google Maps', '6-working-day delivery', 'No contact form, SEO setup or 3D animations'],
@@ -113,8 +113,8 @@ export const pricing = {
     },
     {
       name: 'Starter',
-      originalPrice: '₹15,999',
-      price: '₹9,999',
+      originalPrice: '{starterWas}',
+      price: '{starter}',
       period: 'one-time fee',
       description: 'Everything in Basic, plus a contact form, SEO setup and 3D animations.',
       features: ['Everything in Basic', 'Contact form', 'On-page SEO setup', '3D animations', '1–5 pages', '6-working-day delivery', 'Need an admin panel to manage your content? Additional charges apply'],
@@ -125,11 +125,11 @@ export const pricing = {
       name: 'Maintenance',
       nameNote: 'optional',
       badge: '12 Months FREE',
-      price: '₹375',
-      period: 'per month, billed yearly (₹4,500)',
+      price: '{maintYearMonthly}',
+      period: 'per month, billed yearly ({maintYearTotal})',
       description: '12 months of free maintenance from the website launch date. After that, the plan is optional: continue for less, or manage your website yourself.',
       highlight: '12 months of free maintenance from the website launch date.',
-      features: ['₹375/month when billed yearly (₹4,500/year)', '₹500/month when billed every 6 months (₹3,000)', 'Bug fixes for your delivered website', 'Minor text updates', 'Minor image updates', 'Response to requests within 3 business days', 'Website backups are not included'],
+      features: ['{maintYearMonthly}/month when billed yearly ({maintYearTotal}/year)', '{maintHalfMonthly}/month when billed every 6 months ({maintHalfTotal})', 'Bug fixes for your delivered website', 'Minor text updates', 'Minor image updates', 'Response to requests within 3 business days', 'Website backups are not included'],
       popular: false,
     },
   ],
@@ -163,10 +163,10 @@ export const about = {
   photo: '', // REPLACE – e.g. '/images/me.jpg' (put the file in public/images). Empty shows the logo.
   bio: [
     "I'm Hussain, Founder of SemmAI. With 7 years of website development experience, I personally work on creating modern, responsive websites for businesses. My work uses React, JavaScript and Node.js.",
-    'SemmAI is an independently run technology company serving businesses online across India. Today we build websites; WhatsApp AI assistants, AI customer support, business automation and custom software are coming soon. You communicate directly with the person building your solution.',
+    'SemmAI is an independently run technology company serving businesses online in the US and India. Today we build websites; WhatsApp AI assistants, AI customer support, business automation and custom software are coming soon. You communicate directly with the person building your solution.',
   ],
   reasons: [
-    { icon: 'tag', title: 'Fixed packages', text: 'Website packages from ₹4,999, with a fixed one-time development fee.' },
+    { icon: 'tag', title: 'Fixed packages', text: 'Website packages from {basic}, with a fixed one-time development fee.' },
     { icon: 'eye', title: 'Design preview first', text: 'We send a homepage design preview before we go further.' },
     { icon: 'message', title: 'Direct on WhatsApp', text: 'You talk to the person building your site, not a support queue.' },
     { icon: 'wrench', title: '12 months free maintenance', text: '12 months of free maintenance from the website launch date. After that, you can continue with the maintenance plan.' },
@@ -181,11 +181,11 @@ export const faq = {
   title: 'Frequently asked questions',
   items: [
     { q: 'How long does it take?', a: 'We deliver your website in 6 working days after receiving the advance payment and all required customer content and materials. If content, approvals or feedback are delayed, the timeline extends by the number of days of the delay.' },
-    { q: 'How does payment work?', a: 'You pay 25% advance to start and the remaining 75% after you approve the final website. You can pay by UPI or bank transfer.' },
-    { q: 'Are domain and hosting included in the price?', a: 'No. The package price is a one-time fee for designing and building your website. You do need a domain and hosting, and we handle the setup for you. A domain typically costs around ₹800–1,200 per year, and hosting can be free or low-cost depending on the setup. Domain, hosting and renewal charges are separate where applicable. You own your domain and your content, and we will guide you on the best options.' },
+    { q: 'How does payment work?', a: 'You pay 25% advance to start and the remaining 75% after you approve the final website. You can pay by PayPal. If you are in India, UPI or bank transfer also works.' },
+    { q: 'Are domain and hosting included in the price?', a: 'No. The package price is a one-time fee for designing and building your website. You do need a domain and hosting, and we handle the setup for you. A domain typically costs around {domainCost} per year, and hosting can be free or low-cost depending on the setup. Domain, hosting and renewal charges are separate where applicable. You own your domain and your content, and we will guide you on the best options.' },
     { q: 'How many revisions do I get?', a: 'You get unlimited revisions within the originally agreed project scope, including changes to the agreed design, text, colours and layout. New pages, features, major functionality and scope changes are charged separately.' },
     { q: 'Who owns the website?', a: 'You do. Once the final payment is made, the design, content, domain and hosting accounts are all yours.' },
-  { q: 'What does the maintenance plan include?', a: 'Free maintenance covers bug fixes related to your delivered website, minor text updates and minor image updates, and we aim to respond to maintenance requests within 3 business days. Website backups are not included in the packages or the free maintenance, so you arrange your own. Every website includes 12 months of free maintenance from the website launch date. After that it costs ₹375 per month billed yearly (₹4,500), or ₹500 per month billed every 6 months (₹3,000).' },
+  { q: 'What does the maintenance plan include?', a: 'Free maintenance covers bug fixes related to your delivered website, minor text updates and minor image updates, and we aim to respond to maintenance requests within 3 business days. Website backups are not included in the packages or the free maintenance, so you arrange your own. Every website includes 12 months of free maintenance from the website launch date. After that it costs {maintYearMonthly} per month billed yearly ({maintYearTotal}), or {maintHalfMonthly} per month billed every 6 months ({maintHalfTotal}).' },
   ],
 }
 

@@ -4,10 +4,12 @@ import { about, brand, whatsappLink } from '../data/content'
 import { WhatsAppIcon } from './Icons'
 import Reveal from './Reveal'
 import { Wordmark } from './Logo'
+import { useCurrency } from './CurrencyProvider'
 
 const icons = { zap: Zap, message: MessagesSquare, tag: Tag, eye: Eye, wrench: Wrench }
 
 export default function About() {
+  const { m } = useCurrency()
   return (
     <section id="about" className="section bg-alt">
       <div className="container-x grid items-center gap-10 lg:grid-cols-5">
@@ -34,7 +36,7 @@ export default function About() {
                 <li key={r.title} className="rounded-xl bg-card p-4 shadow-card">
                   <Icon size={22} className="text-accent-600" aria-hidden />
                   <h3 className="mt-2 font-bold">{r.title}</h3>
-                  <p className="mt-1 text-sm text-muted">{r.text}</p>
+                  <p className="mt-1 text-sm text-muted">{m(r.text)}</p>
                 </li>
               )
             })}

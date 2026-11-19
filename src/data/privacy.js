@@ -13,7 +13,7 @@ export const privacy = {
     {
       heading: 'Introduction',
       paras: [
-        `${brand.name} is independently run by ${brand.owner}, serving businesses online across India. This policy explains what information we collect through semmai.net, how we use it and which third-party services are involved.`,
+        `${brand.name} is independently run by ${brand.owner}, serving businesses online in the US and India. This policy explains what information we collect through semmai.net, how we use it and which third-party services are involved.`,
       ],
     },
     {

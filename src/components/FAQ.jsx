@@ -2,9 +2,11 @@ import { useState } from 'react'
 import { ChevronDown } from 'lucide-react'
 import { faq } from '../data/content'
 import Reveal from './Reveal'
+import { useCurrency } from './CurrencyProvider'
 
 export default function FAQ({ items = faq.items, title = faq.title, id = 'faq' }) {
   const [open, setOpen] = useState(0)
+  const { m } = useCurrency()
   return (
     <section id={id} className="section bg-surface">
       <div className="container-x max-w-3xl">
@@ -22,12 +24,12 @@ export default function FAQ({ items = faq.items, title = faq.title, id = 'faq' }
                     id={`${id}-btn-${i}`}
                     onClick={() => setOpen(isOpen ? -1 : i)}
                   >
-                    {item.q}
+                    {m(item.q)}
                     <ChevronDown size={20} aria-hidden className={`shrink-0 transition-transform ${isOpen ? 'rotate-180' : ''}`} />
                   </button>
                 </h3>
                 <div id={`${id}-${i}`} role="region" aria-labelledby={`${id}-btn-${i}`} hidden={!isOpen} className="px-5 pb-5 text-muted">
-                  {item.a}
+                  {m(item.a)}
                 </div>
               </div>
             )

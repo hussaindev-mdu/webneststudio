@@ -14,7 +14,7 @@ export const terms = {
     {
       heading: 'Introduction',
       paras: [
-        `These terms apply to all ${brand.name} website development packages. ${brand.name} is independently run by ${brand.owner} and serves businesses online across India.`,
+        `These terms apply to all ${brand.name} website development packages. ${brand.name} is independently run by ${brand.owner} and serves businesses online in the US and India.`,
         'A separate written agreement for an individual project may override specific terms in this document.',
       ],
     },
@@ -30,7 +30,7 @@ export const terms = {
       bullets: [
         '25% advance payment before development begins.',
         'The remaining 75% is payable after you review and approve the completed website.',
-        'We accept UPI and bank transfer.',
+        'We accept PayPal, UPI and bank transfer.',
         'Domain registration and hosting are charged separately.',
         'Third-party integration charges are separate.',
         `${brand.name} is currently not registered for GST, and GST is not charged on our prices.`,
@@ -119,7 +119,7 @@ export const terms = {
     {
       heading: 'Maintenance After 12 Months',
       paras: [
-        'After the first 12 months, an optional maintenance plan is available at ₹375 per month, billed yearly (₹4,500), or ₹500 per month billed every 6 months (₹3,000), as shown on our pricing page.',
+        'After the first 12 months, an optional maintenance plan is available at {maintYearMonthly} per month, billed yearly ({maintYearTotal}), or {maintHalfMonthly} per month billed every 6 months ({maintHalfTotal}), as shown on our pricing page.',
         'You may instead manage your website independently. There is no obligation to continue maintenance with us.',
       ],
     },
@@ -131,7 +131,7 @@ export const terms = {
     },
     {
       heading: 'Payment Confirmation',
-      paras: ['Please share your payment confirmation with us after each UPI or bank transfer.'],
+      paras: ['Please share your payment confirmation with us after each PayPal, UPI or bank transfer payment.'],
     },
     {
       heading: 'Limitation of Responsibility',

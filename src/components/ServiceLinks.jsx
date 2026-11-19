@@ -2,10 +2,12 @@ import { Link } from 'react-router-dom'
 import { pages } from '../data/pages'
 import { pathFor } from '../data/seo'
 import Reveal from './Reveal'
+import { useCurrency } from './CurrencyProvider'
 
 const featured = ['website-development', 'business-website-design', 'restaurant-website-design', 'clinic-website-design', 'real-estate-website-design', 'website-development-tamil-nadu']
 
 export default function ServiceLinks() {
+  const { m } = useCurrency()
   const items = featured.map((s) => pages.find((p) => p.slug === s))
   return (
     <section id="services" className="section bg-surface">
@@ -20,7 +22,7 @@ export default function ServiceLinks() {
               <h3 className="text-lg font-bold">
                 <Link to={pathFor(p.slug)} className="after:absolute after:inset-0 after:rounded-2xl">{p.nav}</Link>
               </h3>
-              <p className="mt-2 text-muted">{p.description}</p>
+              <p className="mt-2 text-muted">{m(p.description)}</p>
             </li>
           ))}
         </ul>

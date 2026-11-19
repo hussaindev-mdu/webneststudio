@@ -4,6 +4,7 @@ import Seo from './Seo'
 import Reveal from './Reveal'
 import FAQ from './FAQ'
 import { WhatsAppIcon } from './Icons'
+import { CurrencyProvider } from './CurrencyProvider'
 import { portfolio, whatsappLink } from '../data/content'
 import { en, ta, tnWhatsAppMessage } from '../data/tamilNadu'
 import { metaFor, pathFor, breadcrumbSchema, serviceSchema, faqSchema } from '../data/seo'
@@ -214,13 +215,14 @@ function Block({ c, tone }) {
 export default function TamilNaduPage({ page }) {
   // FAQPage markup only for the English questions, which are word-for-word the ones shown on the page
   const schema = [breadcrumbSchema(page), serviceSchema(page), faqSchema(en.faq.items)]
+  // this page is for Tamil Nadu, so everything on it (including shared parts such as FAQ) stays in rupees
   return (
-    <>
+    <CurrencyProvider forced="inr">
       <Seo meta={metaFor(page)} schema={schema} />
       <Hero c={en} current="en" page={page} first />
       <Block c={en} tone={0} />
       <Hero c={ta} current="ta" page={page} />
       <Block c={ta} tone={0} />
-    </>
+    </CurrencyProvider>
   )
 }

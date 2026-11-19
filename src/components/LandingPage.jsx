@@ -8,12 +8,14 @@ import FAQ from './FAQ'
 import Contact from './Contact'
 import CtaBand from './CtaBand'
 import { WhatsAppIcon } from './Icons'
+import { useCurrency } from './CurrencyProvider'
 import { pages } from '../data/pages'
 import { portfolio, whatsappLink } from '../data/content'
 import { metaFor, pathFor, breadcrumbSchema, serviceSchema, faqSchema } from '../data/seo'
 
 // One template for every extra SEO page (services, pricing, portfolio, contact).
 export default function LandingPage({ page }) {
+  const { m } = useCurrency()
   // the closing band already links to Pricing, so don't repeat it in the related list
   const bandHasPricing = page.slug !== 'contact' && page.slug !== 'pricing'
   const related = (page.related || [])
@@ -36,7 +38,7 @@ export default function LandingPage({ page }) {
             <span aria-current="page">{page.nav}</span>
           </nav>
           <h1 className="text-balance text-3xl font-extrabold leading-tight tracking-normal sm:text-5xl sm:tracking-tight">{page.h1}</h1>
-          <p className="mt-5 max-w-3xl text-lg text-muted">{page.intro}</p>
+          <p className="mt-5 max-w-3xl text-lg text-muted">{m(page.intro)}</p>
           <div className="mt-6 flex flex-col gap-3 sm:flex-row">
             {page.slug !== 'contact' && <Link to="/contact/" className="btn-primary">Get a Free Quote</Link>}
             <a href={whatsappLink(`Hi SemmAI, I'm interested in ${page.nav.toLowerCase()}.`)} target="_blank" rel="noopener noreferrer" className="btn-whatsapp">
@@ -54,7 +56,7 @@ export default function LandingPage({ page }) {
               {page.includes.map((f) => (
                 <li key={f.title} className="rounded-2xl border border-line bg-cream p-6">
                   <h3 className="flex items-start gap-2 text-lg font-bold"><Check size={20} className="mt-0.5 shrink-0 text-accent-600" aria-hidden />{f.title}</h3>
-                  <p className="mt-2 text-muted">{f.text}</p>
+                  <p className="mt-2 text-muted">{m(f.text)}</p>
                 </li>
               ))}
             </ul>
@@ -67,11 +69,11 @@ export default function LandingPage({ page }) {
           <div className="container-x max-w-3xl">
             <Reveal>
               <h2 className="section-title">{s.heading}</h2>
-              {s.paras.map((t) => <p key={t} className="mt-4 text-lg text-muted">{t}</p>)}
+              {s.paras.map((t) => <p key={t} className="mt-4 text-lg text-muted">{m(t)}</p>)}
               {s.bullets && (
                 <ul className="mt-5 space-y-2">
                   {s.bullets.map((b) => (
-                    <li key={b} className="flex items-start gap-2"><Check size={18} className="mt-1 shrink-0 text-accent-600" aria-hidden />{b}</li>
+                    <li key={b} className="flex items-start gap-2"><Check size={18} className="mt-1 shrink-0 text-accent-600" aria-hidden />{m(b)}</li>
                   ))}
                 </ul>
               )}

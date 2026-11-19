@@ -2,16 +2,18 @@ import { Check } from 'lucide-react'
 import { brand, hero, whatsappLink } from '../data/content'
 import { WhatsAppIcon } from './Icons'
 import Reveal from './Reveal'
+import { useCurrency } from './CurrencyProvider'
 import Hero3D from './Hero3D'
 
 export default function Hero() {
+  const { m } = useCurrency()
   const headline = hero.headline.replace('{niche}', brand.niche).replace('{city}', brand.city)
   return (
     <section id="top" className="bg-gradient-to-b from-cream to-surface pt-28 pb-16 sm:pt-36 sm:pb-24">
       <div className="container-x grid items-center gap-10 lg:grid-cols-2">
         <Reveal>
           <div className="mb-4 flex flex-wrap items-center gap-1.5 sm:gap-2">
-            <p className="rounded-full bg-gold-100 px-2.5 py-1 text-xs font-semibold sm:px-3 sm:text-sm text-brand-900 dark:bg-gold-400/15 dark:text-gold-400">{hero.eyebrow || brand.tagline}</p>
+            <p className="rounded-full bg-gold-100 px-2.5 py-1 text-xs font-semibold sm:px-3 sm:text-sm text-brand-900 dark:bg-gold-400/15 dark:text-gold-400">{m(hero.eyebrow || brand.tagline)}</p>
             {hero.label && <p className="rounded-full bg-accent-600 px-2.5 py-1 text-xs font-bold text-white sm:px-3 sm:text-sm">{hero.label}</p>}
           </div>
           {hero.kicker && <p className="mb-3 font-heading text-sm font-bold uppercase tracking-wider text-brand-600 dark:text-brand-100 sm:text-base">{hero.kicker}</p>}

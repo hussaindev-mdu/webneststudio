@@ -4,10 +4,12 @@ import Seo from './Seo'
 import { WhatsAppIcon } from './Icons'
 import { brand, whatsappLink } from '../data/content'
 import { metaFor, breadcrumbSchema } from '../data/seo'
+import { useCurrency } from './CurrencyProvider'
 
 // Shared layout for the legal pages (Privacy Policy, Terms & Conditions).
 // `doc` supplies the copy; `showPhone` adds a tap-to-call button to the contact block.
 export default function LegalPage({ doc, contactIntro, showPhone = false }) {
+  const { m } = useCurrency()
   const contactNumber = doc.sections.length + 1
   return (
     <>
@@ -31,13 +33,13 @@ export default function LegalPage({ doc, contactIntro, showPhone = false }) {
             {doc.sections.map((s, i) => (
               <section key={s.heading} aria-labelledby={`p-${i}`}>
                 <h2 id={`p-${i}`} className="text-2xl font-extrabold tracking-normal sm:tracking-tight">{i + 1}. {s.heading}</h2>
-                {s.paras && s.paras.map((t) => <p key={t} className="mt-3 text-lg text-muted">{t}</p>)}
+                {s.paras && s.paras.map((t) => <p key={t} className="mt-3 text-lg text-muted">{m(t)}</p>)}
                 {s.bullets && (
                   <ul className="mt-3 list-disc space-y-1.5 pl-6 text-lg text-muted">
-                    {s.bullets.map((b) => <li key={b}>{b}</li>)}
+                    {s.bullets.map((b) => <li key={b}>{m(b)}</li>)}
                   </ul>
                 )}
-                {s.after && s.after.map((t) => <p key={t} className="mt-3 text-lg text-muted">{t}</p>)}
+                {s.after && s.after.map((t) => <p key={t} className="mt-3 text-lg text-muted">{m(t)}</p>)}
                 {s.links && (
                   <ul className="mt-4 flex flex-col gap-2 sm:flex-row sm:flex-wrap sm:gap-x-6">
                     {s.links.map((l) => (

@@ -19,6 +19,7 @@ import PrivacyPolicy from './components/PrivacyPolicy'
 import TermsPage from './components/TermsPage'
 import Seo from './components/Seo'
 import { pages } from './data/pages'
+import { CurrencyProvider } from './components/CurrencyProvider'
 import { homeMeta, homeSchema } from './data/seo'
 
 function ScrollToTop() {
@@ -70,6 +71,7 @@ function NotFound() {
 
 export default function App() {
   return (
+    <CurrencyProvider>
     <Routes>
       <Route element={<Layout />}>
         <Route index element={<Home />} />
@@ -79,5 +81,6 @@ export default function App() {
         <Route path="*" element={<NotFound />} />
       </Route>
     </Routes>
+    </CurrencyProvider>
   )
 }
